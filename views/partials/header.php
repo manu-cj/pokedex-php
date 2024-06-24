@@ -8,4 +8,12 @@
     <link href="../../public/css/styles.css" type="text/css" rel="stylesheet">
 </head>
 
+<header>
+
+    <nav>
+        <a href="?c=register">register</a>
+    </nav>
+
+</header>
+
 <body>

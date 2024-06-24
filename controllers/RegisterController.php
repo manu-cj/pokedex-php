@@ -4,8 +4,7 @@ if (isset($_POST['register'])) {
     $mail = htmlspecialchars($_POST['mail']);
 
 
-
-
+    
 
 
     if (count($errors) > 0) {
