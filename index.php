@@ -43,7 +43,7 @@ switch ($c) {
 $a = secureUrl($_GET["a"]);
 
 switch ($a) {
-    case 'ajouter':
+    case 'connect':
         getAction("LoginController");
         break;
     case 'register':
