@@ -1,7 +1,7 @@
 <?php
 $servername = "db"; // Vous devriez le changer chez vous à mon avis
 $username = "root";
-$password = "rootpassword"; // le mot de passe de votre config
+$password = ""; // le mot de passe de votre config
 $dbname = "pokedex";
 
 try {
@@ -12,4 +12,3 @@ try {
 } catch(PDOException $e) {
     die("Échec de la connexion : " . $e->getMessage());
 }
-?>

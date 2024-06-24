@@ -1,1 +1,77 @@
 @use "../extends/_extends_dir";
+
+li  {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemon-logo {
+    max-width: 25dvw;
+    margin: 0 auto;
+}
+
+.pokedex-home {
+    color: #3c59a5;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.user-identification {
+    color: #3c59a5;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.search {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search input[type="text"] {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #3c59a5;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+}
+
+.search-button {
+    background-color: #3c59a5;
+    color: #ffcc03;
+    border-radius: 0 4px 4px 0;
+    border: 1px solid #3c59a5;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 5px4;
+}
