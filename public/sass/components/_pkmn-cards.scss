@@ -1,0 +1,157 @@
+.pkmn-section {
+    padding: 15px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    row-gap: 30px;
+    column-gap: 15px;
+
+    .card-pkmn {
+        width: 300px;
+        height: 500px;
+        border: 1px tomato solid;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+        .picture-pkmn {
+            width:100%;
+            height:50%; 
+            background-size:cover;
+            background-position: center;
+        }
+        .data-pkmn {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            text-align: center;
+            border: 2px solid;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+            .types-pkmn{
+                width: 80%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .type {
+                    width: 80px;
+                    padding: 5px;
+                    border-radius: 5px;
+                    background-blend-mode: color-burn;                  
+                }
+            }
+            .cri {
+                width: 75%;
+                background-color: transparent; /* Rend l'arrière-plan transparent */
+                border: none; /* Supprime la bordure par défaut */
+                outline: none;
+            }
+        }
+        .water {
+            background-color: #4a90d9; /* Bleu pour l'élément eau */
+            
+            border-color: rgb(0, 225, 255);
+          }
+          
+          .fire {
+            background-color: #f08030; /* Orange pour l'élément feu */
+            
+            border-color: tomato;
+          }
+          
+          .grass {
+            background-color: #78c850; /* Vert pour l'élément plante */
+            
+            border-color: green;
+          }
+          
+          .electric {
+            background-color: #f8d030; /* Jaune pour l'élément électrique */
+            color: black; /* On peut utiliser du noir pour plus de lisibilité */
+            border-color: #f8e700;
+          }
+    }
+
+    .grass {
+        border-color: green;
+        background-color: #79c74cd8;
+    }
+    .fire {
+        border-color: tomato;
+        background-color: #f47d22d1;
+    }
+    .water {
+        background-color: #2c84e2fb; /* Bleu pour l'élément eau */
+        border-color: rgb(0, 113, 128);
+      }
+    .bug {
+        border-color: rgb(64, 128, 0);
+        background-color: #81c74cdc;
+    }
+    .normal {
+        border-color: #a8a878; /* Couleur gris-vert pour le type Normal */
+        background-color: #a8a878d6; /* Couleur du texte */
+      }
+      .poison {
+        border-color: #af40ef; /* Couleur gris-vert pour le type Normal */
+        background-color: #8742c8da; /* Couleur du texte */
+      }
+      .electric {
+        border-color: #f8e700; /* Couleur gris-vert pour le type Normal */
+        background-color: #f7d00cdc; /* Couleur du texte */
+      }
+      .ground {
+        border-color: #895519; /* Couleur gris-vert pour le type Normal */
+        background-color: #a0643fd3; /* Couleur du texte */
+      }
+      .fairy {
+        border-color: #a75190; /* Couleur gris-vert pour le type Normal */
+        background-color: #f381fdd2; /* Couleur du texte */
+      }
+      .psychic {
+        border-color: #a90a3a; /* Couleur gris-vert pour le type Normal */
+        background-color: #f0036ad5; /* Couleur du texte */
+      }
+      .rock {
+        border-color: #ff9763; /* Couleur gris-vert pour le type Normal */
+        background-color: #f29b54d3; /* Couleur du texte */
+      }
+      .ghost {
+        border-color: #37006b; /* Couleur gris-vert pour le type Normal */
+        background-color: #7206f6cf; /* Couleur du texte */
+      }
+      .fighting {
+        border-color: rgb(248, 128, 0);
+        background-color: #ff6f00d5;
+    }
+    .steel {
+        border-color: rgb(142, 142, 142);
+        background-color: #6a6a6ad8;
+    }
+    .dragon {
+        border-color: rgb(108, 71, 255);
+        background-color: #4c00ffe1;
+    }
+    .ice {
+        border-color: rgb(71, 243, 255);
+        background-color: #22e6f4da;
+    }
+    .dark {
+        border-color: rgb(43, 25, 105);
+        background-color: #03040dcf;
+        color: white;
+    }
+    .flying {
+        border-color: rgb(0, 204, 255);
+        background-color: #81d3ffd8;
+    }
+}

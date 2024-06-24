@@ -33,7 +33,7 @@ switch ($c) {
          break;
     case 'register':
         getPath("register");
-            break;
+        break;
     
     default:
         getPath("404");
