@@ -38,8 +38,8 @@ switch ($url['path']) {
             // Terminate the script to ensure no further code is executed
             die();
         } else error(405);
-        break;
-
+          break;
+        
         // Default case: Handle all other paths by calling 'error()' function
     default:
         error();
