@@ -1,5 +1,6 @@
 <?php
 
+
 function getPath($page) {
     require __DIR__ . "/views/pages/".$page.".php";
 }
@@ -25,15 +26,9 @@ switch ($c) {
     case 'home':
        getPath("index");
         break;
-    case 'pokemon':
-        getPath("show");
-        break;
     case 'login':
         getPath("login");
          break;
-    case 'register':
-        getPath("register");
-            break;
     
     default:
         getPath("404");
@@ -43,7 +38,7 @@ switch ($c) {
 $a = secureUrl($_GET["a"]);
 
 switch ($a) {
-    case 'ajouter':
+    case 'connect':
         getAction("LoginController");
         break;
     case 'register':
@@ -54,6 +49,3 @@ switch ($a) {
         getPath("404");
         break;
 }
-
-
-

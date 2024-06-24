@@ -6,7 +6,7 @@ require_once __DIR__ . '../../partials/header.php';
 <main>
     <h1>Pokedex - Homepage</h1>
     <p>Hello <strong><?php echo $user['name'] ?></p></strong>
-    <a href="/pokemon?name=pikachu">Pikachu</a>
+    <a href="/?c=pokemon&name=pikachu">Pikachu</a>
 </main>
 
 <?php
