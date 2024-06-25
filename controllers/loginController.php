@@ -6,29 +6,32 @@ function sanitizeInput($data) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $_SESSION['errors'] = [];
+
     $email = sanitizeInput($_POST["email"]);
     $password = sanitizeInput($_POST["password"]);
 
-    $_SESSION['errors'] = [];
-
+    // Vérification des champs vides
     if (empty($email) || empty($password)) {
         $_SESSION['errors'][] = "Tous les champs sont obligatoires.";
     } else {
+        // Validation de l'email
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $_SESSION['errors'][] = "Adresse e-mail invalide.";
-        }
-
-        // Vérifier les informations d'identification (exemple simple)
-        $dummy_user = "test@test.com";
-        $dummy_password = "aze";
-
-        if ($email === $dummy_user && $password === $dummy_password) {
-            // Connexion réussie
-            $_SESSION["user"] = $email;
-            header("Location: ../views/pages/index.php");
-            exit();
         } else {
-            $_SESSION['errors'][] = "E-mail ou mot de passe incorrect.";
+
+            // Inclure le gestionnaire de connexion
+            require '../model/loginManager.php';
+
+            // Appeler la fonction pour vérifier les identifiants
+            if (verifyCredentials($email, $password)) {
+                // Connexion réussie
+                header("Location: ../views/pages/index.php");
+                exit();
+            } else {
+                // Identifiants incorrects
+                $_SESSION['errors'][] = "E-mail ou mot de passe incorrect.";
+            }
         }
     }
 
