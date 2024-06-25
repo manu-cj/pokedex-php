@@ -1,10 +1,11 @@
 <?php
 
+
 function getPath($page) {
     require __DIR__ . "/views/pages/".$page.".php";
 }
 function getAction($page) {
-    require __DIR__ . "/controllers/".$page.".php";
+    require __DIR__ . "/Controller/".$page.".php";
 }
 
 if (!isset($_GET["c"])) {
@@ -25,31 +26,20 @@ switch ($c) {
     case 'home':
        getPath("index");
         break;
-    case 'pokemon':
-        getPath("show");
-        break;
     case 'login':
         getPath("login");
          break;
-    case 'register':
-        getPath("register");
-        break;
-    case 'page2':
-        getPath("page2");
-        break;
     
     default:
-        require __DIR__ . "/views/errors/404.php";
+        getPath("404");
         break;
 }
 
-
-if (isset($_GET['a'])) {
-    $a = secureUrl($_GET["a"]);
+$a = secureUrl($_GET["a"]);
 
 switch ($a) {
     case 'connect':
-        getAction("loginController");
+        getAction("LoginController");
         break;
     case 'register':
         getAction("RegisterController");
@@ -59,8 +49,3 @@ switch ($a) {
         getPath("404");
         break;
 }
-}
-
-
-
-
