@@ -1,0 +1,15 @@
+.pagination-section {
+    margin: 30px;
+    a {
+        padding: 15px;
+        background-color: aquamarine;
+        text-decoration-line: none;
+        color: black;
+        font-weight: bold;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: rgb(109, 236, 193);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;        }
+    }
+}
