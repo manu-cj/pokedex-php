@@ -8,19 +8,19 @@ $dbname = "pokedex";
 // Create a connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-//Function for clearing, encoding, and screening text
+// Function for clearing, encoding, and screening text
 function clean_encode_and_escape_text($text)
-    {
-        // Remplacer uniquement le caractère \f (saut de page) par un espace
-        $cleaned_text = str_replace("\f", ' ', $text);
-        // Convertir en UTF-8
-        $encoded_text = mb_convert_encoding($cleaned_text, 'UTF-8', 'auto');
-        // Remplacer les '?' par 'é'
-        $replaced_text = str_replace('?', 'é', $encoded_text);
-        // Échapper les caractères spéciaux HTML
-        $escaped_text = htmlspecialchars($replaced_text, ENT_QUOTES, 'UTF-8');
-        return $escaped_text;
-    }
+{
+    // Replace only the \f (form feed) character with a space
+    $cleaned_text = str_replace("\f", ' ', $text);
+    // Convert to UTF-8
+    $encoded_text = mb_convert_encoding($cleaned_text, 'UTF-8', 'auto');
+    // Replace '?' with 'é'
+    $replaced_text = str_replace('?', 'é', $encoded_text);
+    // Escape HTML special characters
+    $escaped_text = htmlspecialchars($replaced_text, ENT_QUOTES, 'UTF-8');
+    return $escaped_text;
+}
 
 // Checking the connection
 if ($conn->connect_error) {
@@ -45,7 +45,6 @@ if (!empty($query)) {
         }
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -60,49 +59,57 @@ if (!empty($query)) {
 </head>
 
 <body>
-<?php include '../partials/header.php'; ?>
+    <?php include '../partials/header.php'; ?>
 
-<main>
-    <div class="search-results">
-        <?php
-        // Search for Pokemon by the entered query
-        if (!empty($query)) {
-            $sql = "SELECT * FROM pokemon WHERE name LIKE '%$query%'";
-            $result = $conn->query($sql);
+    <main>
+        <div class="search-results">
+            <?php
+            // Search for Pokemon by the entered query
+            if (!empty($query)) {
+                $sql = "SELECT * FROM pokemon WHERE name LIKE '%$query%'";
+                $result = $conn->query($sql);
 
-            if ($result->num_rows > 0): ?>
-                <div class="search-container">
+                if ($result->num_rows > 0): ?>
+                    <div class="search-container">
                         <?php while ($row = $result->fetch_assoc()): ?> 
-                        <div class="pokemon-info">
-                            <h2><?php echo htmlspecialchars($query); ?></h2>
-                            <p><strong><?php echo htmlspecialchars($row['type']); ?></strong></p>
-                            <p><strong>Description:</strong> <?php echo clean_encode_and_escape_text($row['description']); ?></p>
-                            <p><strong>HP:</strong> <?php echo htmlspecialchars($row['hp']); ?></p>
-                            <p><strong>Attack:</strong> <?php echo htmlspecialchars($row['attack']); ?></p>
-                            <p><strong>Specific Attack:</strong> <?php echo htmlspecialchars($row['special_attack']); ?></p>
-                            <p><strong>Defense:</strong> <?php echo htmlspecialchars($row['defense']); ?></p>
-                            <p><strong>Specific Defense:</strong> <?php echo htmlspecialchars($row['special_defense']); ?></p>
-                            <p><strong>Speed:</strong> <?php echo htmlspecialchars($row['speed']); ?></p>
-                            <p><strong>Evolution:</strong> <?php echo htmlspecialchars($row['gen']); ?></p>
-                            <!-- <audio controls>
-                                <source src="<?php echo htmlspecialchars($row['cry_url']); ?>" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio> -->
-                        </div>
-                        <div class="pokemon-image">
-                           <p class="pokemon-number"><?php echo "# ". htmlspecialchars($row['pokedexNumber']); ?></p>
-                           <img class="card-image" src="<?php echo"./../../public/img/pokemon/" . htmlspecialchars($row['name']) . ".png"; ?>" alt="<?php echo htmlspecialchars($row['name']); ?>">
-                        </div>
-                       
-                    <?php endwhile; ?>
-                </div>
-            <?php else: ?>
-                <p>No results found</p>
-            <?php endif;
-        }
-        ?>
-    </div>
-</main>
+                            <div class="pokemon-info">
+                                <h2><?php echo htmlspecialchars($row['name']); ?></h2>
+                                <p><strong>Type:</strong> <?php echo htmlspecialchars($row['type']); ?></p>
+                                <p><strong>Description:</strong> <?php echo clean_encode_and_escape_text($row['description']); ?></p>
+
+                                <div class="stat-bars">
+                                <?php
+                                function render_stat_bar($label, $value, $class) {
+                                    echo "<div class='stat-label'><p>$label</p></div>";
+                                    echo "<div class='stat-bar'>                                    
+                                    <div class='stat-bar-inner $class' style='width: " . htmlspecialchars($value) . "%;'></div>
+                                  </div>";
+                                }
+
+                                render_stat_bar('HP', $row['hp'], 'hp-bar');
+                                render_stat_bar('Attack', $row['attack'], 'attack-bar');
+                                render_stat_bar('Defense', $row['defense'], 'defense-bar');
+                                render_stat_bar('Specific Defense', $row['special_defense'], 'special-defense-bar');
+                                render_stat_bar('Specific Attack', $row['special_attack'], 'special-attack-bar');
+                                render_stat_bar('Speed', $row['speed'], 'speed-bar');
+                                ?>
+                            </div>
+
+                                <p><strong>Evolution:</strong> <?php echo htmlspecialchars($row['gen']); ?></p>
+                            </div>
+                            <div class="pokemon-image">
+                               <p class="pokemon-number"><?php echo "# ". htmlspecialchars($row['pokedexNumber']); ?></p>
+                               <img class="card-image" src="<?php echo "./../../public/img/pokemon/" . htmlspecialchars($row['name']) . ".png"; ?>" alt="<?php echo htmlspecialchars($row['name']); ?>">
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                <?php else: ?>
+                    <p>No results found</p>
+                <?php endif;
+            }
+            ?>
+        </div>
+    </main>
 
 </body>
 </html>
