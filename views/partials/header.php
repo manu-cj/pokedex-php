@@ -11,8 +11,14 @@
 <header>
 
     <nav>
-        <a href="?c=register">register</a>
-        <a href="?c=login">login</a>
+        <?php
+        if(isset($_SESSION['user']) && !empty($_SESSION['user'])) {
+            echo '<a href="?a=disconnect">Disconnect</a>';
+        } else {
+            echo '<a href="?c=register">register</a>
+                    <a href="?c=login">login</a>';
+        }
+        ?>
     </nav>
 
 </header>

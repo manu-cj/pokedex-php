@@ -1,8 +1,8 @@
 <?php
 
-$servername = "db"; // Vous devriez le changer chez vous à mon avis
+$servername = "localhost"; // Vous devriez le changer chez vous à mon avis
 $username = "root";
-$pwd = "rootpassword"; // le mot de passe de votre config
+$pwd = ""; // le mot de passe de votre config
 $dbname = "pokedex";
 
 try {

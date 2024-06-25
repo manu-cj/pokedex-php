@@ -54,6 +54,10 @@ switch ($a) {
     case 'register':
         getAction("RegisterController");
         break;
+
+    case 'disconnect':
+        getAction("disconnectController");
+        break;
     
     default:
         getPath("404");

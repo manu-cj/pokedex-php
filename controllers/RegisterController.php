@@ -22,7 +22,7 @@ if (isset($_POST['register'])) {
         // Check if the password meets the requirements
         if (!preg_match($pattern, $password)) {
             echo "Password should be 6 to 20 characters long, with at least one uppercase letter, one number, and one special character.<br>";
-            echo $lstName,$frstName,$password,$mail,$username,$brthDate;
+            echo $lstName,$frstName,$password,$mail,$usrname,$brthDate;
         } else {
             // Check for errors
             if (isset($errors) && count($errors) > 0) {
