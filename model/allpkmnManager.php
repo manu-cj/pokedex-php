@@ -13,6 +13,7 @@ function clean_encode_and_escape_text($text)
             $escaped_text = htmlspecialchars($replaced_text, ENT_QUOTES, 'UTF-8');
             return $escaped_text;
         }
+        
     function page1() {
         require("./Engine/connect.php");
 
