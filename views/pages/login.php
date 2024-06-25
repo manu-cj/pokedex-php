@@ -4,6 +4,17 @@ $title = "login";
 require_once __DIR__ . '../../partials/header.php';
 ?>
     <main>
+
+    <?php 
+        if (isset($_SESSION['registration']) && $_SESSION['registration'] === true) { ?>
+        
+            <div class="notification">
+                <p>registered succesfully</p>
+            </div>
+            
+        <?php }?>
+
+
         <form id="loginForm" method="post" action="/pokedex-php/controllers/loginController.php">
             <h2>Mon compte</h2>
 

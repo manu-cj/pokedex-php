@@ -2,7 +2,7 @@
 // ini_set('display_errors', 1);
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
-
+    
 if (isset($_POST['register'])) {
     // Get and sanitize form data
     $mail = filter_input(INPUT_POST, 'mail', FILTER_SANITIZE_EMAIL);

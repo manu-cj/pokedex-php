@@ -868,6 +868,15 @@ main {
   border-radius: 20px;
 }
 
+.notification {
+  position: absolute;
+  top: 10vh;
+  right: 10vw;
+  width: 20vw;
+  height: 10vh;
+  border: solid 1px red;
+}
+
 .register-form {
   width: 300px;
   margin: 0 auto;
