@@ -11,12 +11,13 @@
 
 <body>
 <header>
+<img class="pokemon-logo" src="../../public/img/pokemon-logo.png" alt="Pokemon logo">
     <div class="header-container">
         <div class="logo">            
             <h1><a class="pokedex-home" href="/">Pokedex</a></h1>
         </div>
         <div class="search">
-            <form action="search.php" method="get">
+            <form action="../pages/search.php" method="get">
                 <input type="text" name="query" placeholder="Search...">
                 <button class="search-button" type="submit">Search</button>
             </form>
@@ -24,7 +25,7 @@
         <nav class="navigation">
             <ul>
                 <?php if (isset($_SESSION['user_id'])): ?>
-                    <li><a class="user-identification"href="profile.php">Profile</a></li>
+                    <li><a class="user-identification"href="profile.php"><!--RegisterManager.php???-->My account</a></li>
                     <li><a class="user-identification"href="logout.php">Logout</a></li>
                 <?php else: ?>
                     <li><a class="user-identification"href="login.php">Login</a></li>
@@ -33,7 +34,6 @@
             </ul>
         </nav>
     </div>
-    <img class="pokemon-logo" src="../../public/img/pokemon-logo.png" alt="Pokemon logo">
 </header>
 
 <main class="">

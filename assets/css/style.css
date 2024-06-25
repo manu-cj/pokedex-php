@@ -664,7 +664,7 @@ ul {
 
 .pokemon-logo {
   max-width: 25dvw;
-  margin: 0 auto;
+  margin: 10px auto 0;
 }
 
 .pokedex-home {
@@ -710,4 +710,37 @@ ul {
   padding: 5px 10px;
   cursor: pointer;
   margin-left: 5px4;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70dvw;
+  margin: 0 auto;
+}
+
+.pokemon-info {
+  width: 30dvw;
+  background-color: #fff;
+  color: #4B5563;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.pokemon-image {
+  width: 30dvw;
+}
+
+.card-image {
+  width: 25dvw;
+  z-index: 1;
+  position: relative;
+}
+
+.pokemon-number {
+  position: absolute;
+  font-size: 12dvw;
+  font-weight: 900;
+  color: #E5E7EB;
 }/*# sourceMappingURL=style.css.map */
