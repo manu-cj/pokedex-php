@@ -1,24 +1,28 @@
 .pkmn-section {
     padding: 15px;
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     align-content: center;
-    row-gap: 30px;
-    column-gap: 15px;
+    row-gap: 50px;
+    column-gap: 75px;
 
     .card-pkmn {
-        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
         height: 500px;
-        border: 1px tomato solid;
+        border: 2px solid;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
         .picture-pkmn {
-            width:100%;
+            width:60%;
             height:50%; 
             background-size:cover;
             background-position: center;
@@ -36,6 +40,7 @@
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
             box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            color: white;
 
             .types-pkmn{
                 width: 80%;
@@ -46,7 +51,7 @@
                     width: 80px;
                     padding: 5px;
                     border-radius: 5px;
-                    background-blend-mode: color-burn;                  
+                    filter: blur(1.5);                 
                 }
             }
             .cri {
@@ -56,102 +61,159 @@
                 outline: none;
             }
         }
-        .water {
-            background-color: #4a90d9; /* Bleu pour l'élément eau */
-            
-            border-color: rgb(0, 225, 255);
-          }
-          
-          .fire {
-            background-color: #f08030; /* Orange pour l'élément feu */
-            
-            border-color: tomato;
-          }
-          
-          .grass {
-            background-color: #78c850; /* Vert pour l'élément plante */
-            
-            border-color: green;
-          }
-          
-          .electric {
-            background-color: #f8d030; /* Jaune pour l'élément électrique */
-            color: black; /* On peut utiliser du noir pour plus de lisibilité */
-            border-color: #f8e700;
-          }
+
+        .grass {
+         
+          border: 3px green solid;
+          background-color: #79c74cd8;
+      }
+      .fire {
+          border: 3px tomato solid;
+          background-color: #f47d22d1;
+      }
+      .water {
+          background: #2c84e2fb ; /* Bleu pour l'élément eau */
+          border: 3px rgb(0, 113, 128) solid;
+        }
+      .bug {
+          border: 3px rgb(64, 128, 0) solid;
+          background-color: #81c74cdc;
+      }
+      .normal {
+          border: 3px #a8a878 solid; /* Couleur gris-vert pour le type Normal */
+          background-color: #a8a878d6; /* Couleur du texte */
+        }
+        .poison {
+          border: 3px #af40ef solid; /* Couleur gris-vert pour le type Normal */
+          background-color: #8742c8da; /* Couleur du texte */
+        }
+        .electric {
+          border: 3px #f8e700 solid; /* Couleur gris-vert pour le type Normal */
+          background-color: #f7d00cdc; /* Couleur du texte */
+        }
+        .ground {
+          border: 3px #895519 solid; /* Couleur gris-vert pour le type Normal */
+          background-color: #a0643fd3; /* Couleur du texte */
+        }
+        .fairy {
+          border: 3px #a75190; /* Couleur gris-vert pour le type Normal */
+          background-color: #f381fdd2; /* Couleur du texte */
+        }
+        .psychic {
+          border: 3px #a90a3a; /* Couleur gris-vert pour le type Normal */
+          background-color: #f0036ad5; /* Couleur du texte */
+        }
+        .rock {
+          border: 3px solid #e45a14; /* Couleur gris-vert pour le type Normal */
+          background-color: #f29b54d3; /* Couleur du texte */
+        }
+        .ghost {
+          border: 3px solid #c595fc; /* Couleur gris-vert pour le type Normal */
+          background-color: #7206f6cf; /* Couleur du texte */
+          color: white;
+        }
+        .fighting {
+          border: 3px solid rgb(248, 128, 0);
+          background-color: #ff6f00c0;
+      }
+      .steel {
+          border: 3px solid rgb(93, 92, 92);
+          background-color: #8c8a8ae3;
+      }
+      .dragon {
+          border: 3px solid rgb(108, 71, 255);
+          background-color: #4c00ffe1;
+      }
+      .ice {
+          border: 3px solid rgb(71, 243, 255);
+          background-color: #22e6f4da;
+      }
+      .dark {
+          border: 3px solid rgb(255, 255, 255);
+          background-color: #03040dcf;
+          color: white;
+      }
+      .flying {
+          border: 3px solid rgb(133, 229, 253);
+          background-color: #81d3ffd8;
+      }
+        
+
     }
 
-    .grass {
-        border-color: green;
-        background-color: #79c74cd8;
+    .cardgrass {
+      background-image: url('https://staticg.sportskeeda.com/editor/2021/04/9fe81-16173036977561-800.jpg?w=640');
+
     }
-    .fire {
-        border-color: tomato;
-        background-color: #f47d22d1;
+    .cardfire {
+      background-image: url('https://w0.peakpx.com/wallpaper/247/374/HD-wallpaper-fire-energy-fire-card-pokemon.jpg');
     }
-    .water {
-        background-color: #2c84e2fb; /* Bleu pour l'élément eau */
-        border-color: rgb(0, 113, 128);
-      }
-    .bug {
-        border-color: rgb(64, 128, 0);
-        background-color: #81c74cdc;
+
+    .cardwater {
+      background-image: url('https://i.ytimg.com/vi/9pyp6BXqcDM/maxresdefault.jpg');
+      background-size: cover;
     }
-    .normal {
-        border-color: #a8a878; /* Couleur gris-vert pour le type Normal */
-        background-color: #a8a878d6; /* Couleur du texte */
-      }
-      .poison {
-        border-color: #af40ef; /* Couleur gris-vert pour le type Normal */
-        background-color: #8742c8da; /* Couleur du texte */
-      }
-      .electric {
-        border-color: #f8e700; /* Couleur gris-vert pour le type Normal */
-        background-color: #f7d00cdc; /* Couleur du texte */
-      }
-      .ground {
-        border-color: #895519; /* Couleur gris-vert pour le type Normal */
-        background-color: #a0643fd3; /* Couleur du texte */
-      }
-      .fairy {
-        border-color: #a75190; /* Couleur gris-vert pour le type Normal */
-        background-color: #f381fdd2; /* Couleur du texte */
-      }
-      .psychic {
-        border-color: #a90a3a; /* Couleur gris-vert pour le type Normal */
-        background-color: #f0036ad5; /* Couleur du texte */
-      }
-      .rock {
-        border-color: #ff9763; /* Couleur gris-vert pour le type Normal */
-        background-color: #f29b54d3; /* Couleur du texte */
-      }
-      .ghost {
-        border-color: #37006b; /* Couleur gris-vert pour le type Normal */
-        background-color: #7206f6cf; /* Couleur du texte */
-      }
-      .fighting {
-        border-color: rgb(248, 128, 0);
-        background-color: #ff6f00d5;
+    .cardbug {
+      background-image: url('https://1.bp.blogspot.com/-wXdSSoxscp8/YFkxtNTVnxI/AAAAAAAARoQ/AHbeYQF09oAWLycmErpvAzEsTaOGM5m2QCLcBGAsYHQ/s16000/capa-inseto.png');
     }
-    .steel {
-        border-color: rgb(142, 142, 142);
-        background-color: #6a6a6ad8;
+    .cardnormal {
+      background-image: url('https://i.ytimg.com/vi/ze6zcaemf7M/maxresdefault.jpg');
+      background-size: cover;
     }
-    .dragon {
-        border-color: rgb(108, 71, 255);
-        background-color: #4c00ffe1;
+    .cardpoison {
+      background-image: url('https://e0.pxfuel.com/wallpapers/732/598/desktop-wallpaper-poison-types-in-pokemon-go-pvp-meta-analysis-per-league-pokemon-go-hub-thumbnail.jpg');
+      background-size: cover;
     }
-    .ice {
-        border-color: rgb(71, 243, 255);
-        background-color: #22e6f4da;
+    .cardelectric {
+      background-image: url('https://i.ytimg.com/vi/VG0gh5GHoBU/maxresdefault.jpg');
+      background-size: cover;
     }
-    .dark {
-        border-color: rgb(43, 25, 105);
-        background-color: #03040dcf;
-        color: white;
+    .cardground {
+      background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2b96252f-36a9-4d78-a896-f31e2e20c0b6/d8jxrn2-dae37f01-f38e-42ce-879a-7aee5b44d477.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJiOTYyNTJmLTM2YTktNGQ3OC1hODk2LWYzMWUyZTIwYzBiNlwvZDhqeHJuMi1kYWUzN2YwMS1mMzhlLTQyY2UtODc5YS03YWVlNWI0NGQ0NzcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kY9ySWV7eccyhKZUPb9nLkuwtKWqdnVQiXRV4lEkMg0');
+      background-repeat: no-repeat;
+      background-size: cover;
     }
-    .flying {
-        border-color: rgb(0, 204, 255);
-        background-color: #81d3ffd8;
+    .cardfairy {
+      background-image: url('https://wallpapercave.com/wp/wp11000651.jpg');
+      background-size: cover;
     }
+    .cardghost {
+      background-image: url('https://w0.peakpx.com/wallpaper/566/14/HD-wallpaper-pokemon-ghost-type-purple-purple-smoke-smoke.jpg');
+    }
+    .cardpsychic {
+      background-image: url('https://e0.pxfuel.com/wallpapers/483/869/desktop-wallpaper-psychic-types-in-pokemon-go-pvp-meta-analysis-per-league-pokemon-go-hub.jpg');
+      background-size: cover;
+      
+    }
+    .carddark {
+      background-image: url('https://pokemongohub.net/wp-content/uploads/2019/01/Dark-Types.jpg');
+    }
+    .cardice {
+      background-image: url('https://media.istockphoto.com/id/466513257/photo/image-of-light-blue-ice-design.webp?b=1&s=170667a&w=0&k=20&c=fzdm8jWAJO53AXqJ9bQ95Dz_pwN0NDv_FI_lzgHVjFw=');
+      background-size: cover;
+    }
+    .carddragon {
+      background-image: url('https://pokemongohub.net/wp-content/uploads/2019/01/Dragon-Types.jpg');
+      background-size: cover;
+    }
+    .cardsteel {
+      background-image: url('https://i.ytimg.com/vi/IK9TxCgn7IM/maxresdefault.jpg');
+      background-size: cover;
+    }
+    .cardrock {
+      background-image: url('https://pokemongohub.net/wp-content/uploads/2019/01/Ground-Types.jpg');
+    }
+    .cardfighting {
+      background-image: url('https://i.ytimg.com/vi/k7xQ8LWL50g/mqdefault.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .cardflying {
+      background-image: url('https://pokemongohub.net/wp-content/uploads/2019/02/Flying-Types.jpg');
+    }
+  
+
+
+
+    
 }
