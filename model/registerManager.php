@@ -28,4 +28,3 @@ function register($mail,$usrname,$password,$frstName,$lstName,$brthDate) {
     }
     
 }
-
