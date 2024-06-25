@@ -1,4 +1,5 @@
 <?php
+
 $servername = "db"; // Vous devriez le changer chez vous à mon avis
 $username = "root";
 $password = "rootpassword"; // le mot de passe de votre config

@@ -1,5 +1,6 @@
 
 <?php
+echo 'hi';
 if (isset($_POST['register'])) {
     $mail = htmlspecialchars($_POST['mail']);
 

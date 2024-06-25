@@ -1,5 +1,5 @@
 <?php
-$title = "Home";
+$title = "page 2";
 require_once __DIR__ . '../../partials/header.php';
 
 
@@ -12,7 +12,7 @@ require_once __DIR__ . '../../partials/header.php';
     <?php
     require('./model/allpkmnManager.php');
     
-    page1();
+    page2();
     
     ?>
 </section> 
