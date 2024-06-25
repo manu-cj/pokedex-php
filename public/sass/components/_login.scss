@@ -1,0 +1,31 @@
+#loginForm {
+    @include flex(column,flex-start,flex-start);
+    @include box(300px,auto);
+    padding:30px;
+    margin-top: 25px;
+    border:solid 1px black;
+    border-radius: 30px;
+
+    h2 {
+        margin-bottom: 25px;
+    }
+    
+    input {
+        margin-bottom: 25px;
+        width:100%;
+    }
+
+    p {
+        color:rgb(142, 0, 0);
+    }
+
+    button {
+        @extend .pointer;
+        border:none;
+        padding: 10px;
+    }
+    button:hover {
+        background-color: rgb(160, 160, 217);
+        border-radius: 20px;
+    }
+}

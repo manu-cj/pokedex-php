@@ -1,0 +1,4 @@
+@import '_pkmn-cards.scss';
+main {
+    @include flex(column,center,center);
+}
