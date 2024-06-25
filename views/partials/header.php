@@ -12,6 +12,7 @@
 
     <nav>
         <a href="?c=register">register</a>
+        <a href="?c=login">login</a>
     </nav>
 
 </header>
