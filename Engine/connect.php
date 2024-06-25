@@ -1,11 +1,11 @@
 <?php
-$servername = "db"; // Vous devriez le changer chez vous à mon avis
+$servername = "localhost"; // Vous devriez le changer chez vous à mon avis
 $username = "root";
-$password = "rootpassword"; // le mot de passe de votre config
+$pwd = ""; // le mot de passe de votre config
 $dbname = "pokedex";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $pwd);
     // Définir le mode d'erreur PDO à exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e) {
