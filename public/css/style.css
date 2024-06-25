@@ -539,210 +539,6 @@ html[data-theme="dark"] {
   filter: contrast(200%) brightness(150%) hue-rotate(240deg) grayscale(0);
 }
 
-.pkmn-section {
-  padding: 15px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  row-gap: 50px;
-  column-gap: 75px;
-}
-.pkmn-section .card-pkmn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 350px;
-  height: 500px;
-  border: 2px solid;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-.pkmn-section .card-pkmn .picture-pkmn {
-  width: 60%;
-  height: 50%;
-  background-size: cover;
-  background-position: center;
-}
-.pkmn-section .card-pkmn .data-pkmn {
-  width: 100%;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  text-align: center;
-  border: 2px solid;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  color: white;
-}
-.pkmn-section .card-pkmn .data-pkmn .types-pkmn {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.pkmn-section .card-pkmn .data-pkmn .types-pkmn .type {
-  width: 80px;
-  padding: 5px;
-  border-radius: 5px;
-  filter: blur(1.5);
-}
-.pkmn-section .card-pkmn .data-pkmn .cri {
-  width: 75%;
-  background-color: transparent; /* Rend l'arrière-plan transparent */
-  border: none; /* Supprime la bordure par défaut */
-  outline: none;
-}
-.pkmn-section .card-pkmn .grass {
-  border: 3px green solid;
-  background-color: rgba(121, 199, 76, 0.8470588235);
-}
-.pkmn-section .card-pkmn .fire {
-  border: 3px tomato solid;
-  background-color: rgba(244, 125, 34, 0.8196078431);
-}
-.pkmn-section .card-pkmn .water {
-  background: rgba(44, 132, 226, 0.9843137255); /* Bleu pour l'élément eau */
-  border: 3px rgb(0, 113, 128) solid;
-}
-.pkmn-section .card-pkmn .bug {
-  border: 3px rgb(64, 128, 0) solid;
-  background-color: rgba(129, 199, 76, 0.862745098);
-}
-.pkmn-section .card-pkmn .normal {
-  border: 3px #a8a878 solid; /* Couleur gris-vert pour le type Normal */
-  background-color: rgba(168, 168, 120, 0.8392156863); /* Couleur du texte */
-}
-.pkmn-section .card-pkmn .poison {
-  border: 3px #af40ef solid; /* Couleur gris-vert pour le type Normal */
-  background-color: rgba(135, 66, 200, 0.8549019608); /* Couleur du texte */
-}
-.pkmn-section .card-pkmn .electric {
-  border: 3px #f8e700 solid; /* Couleur gris-vert pour le type Normal */
-  background-color: rgba(247, 208, 12, 0.862745098); /* Couleur du texte */
-}
-.pkmn-section .card-pkmn .ground {
-  border: 3px #895519 solid; /* Couleur gris-vert pour le type Normal */
-  background-color: rgba(160, 100, 63, 0.8274509804); /* Couleur du texte */
-}
-.pkmn-section .card-pkmn .fairy {
-  border: 3px #a75190; /* Couleur gris-vert pour le type Normal */
-  background-color: rgba(243, 129, 253, 0.8235294118); /* Couleur du texte */
-}
-.pkmn-section .card-pkmn .psychic {
-  border: 3px #a90a3a; /* Couleur gris-vert pour le type Normal */
-  background-color: rgba(240, 3, 106, 0.8352941176); /* Couleur du texte */
-}
-.pkmn-section .card-pkmn .rock {
-  border: 3px solid #e45a14; /* Couleur gris-vert pour le type Normal */
-  background-color: rgba(242, 155, 84, 0.8274509804); /* Couleur du texte */
-}
-.pkmn-section .card-pkmn .ghost {
-  border: 3px solid #c595fc; /* Couleur gris-vert pour le type Normal */
-  background-color: rgba(114, 6, 246, 0.8117647059); /* Couleur du texte */
-  color: white;
-}
-.pkmn-section .card-pkmn .fighting {
-  border: 3px solid rgb(248, 128, 0);
-  background-color: rgba(255, 111, 0, 0.7529411765);
-}
-.pkmn-section .card-pkmn .steel {
-  border: 3px solid rgb(93, 92, 92);
-  background-color: rgba(140, 138, 138, 0.8901960784);
-}
-.pkmn-section .card-pkmn .dragon {
-  border: 3px solid rgb(108, 71, 255);
-  background-color: rgba(76, 0, 255, 0.8823529412);
-}
-.pkmn-section .card-pkmn .ice {
-  border: 3px solid rgb(71, 243, 255);
-  background-color: rgba(34, 230, 244, 0.8549019608);
-}
-.pkmn-section .card-pkmn .dark {
-  border: 3px solid rgb(255, 255, 255);
-  background-color: rgba(3, 4, 13, 0.8117647059);
-  color: white;
-}
-.pkmn-section .card-pkmn .flying {
-  border: 3px solid rgb(133, 229, 253);
-  background-color: rgba(129, 211, 255, 0.8470588235);
-}
-.pkmn-section .cardgrass {
-  background-image: url("https://staticg.sportskeeda.com/editor/2021/04/9fe81-16173036977561-800.jpg?w=640");
-}
-.pkmn-section .cardfire {
-  background-image: url("https://w0.peakpx.com/wallpaper/247/374/HD-wallpaper-fire-energy-fire-card-pokemon.jpg");
-}
-.pkmn-section .cardwater {
-  background-image: url("https://i.ytimg.com/vi/9pyp6BXqcDM/maxresdefault.jpg");
-  background-size: cover;
-}
-.pkmn-section .cardbug {
-  background-image: url("https://1.bp.blogspot.com/-wXdSSoxscp8/YFkxtNTVnxI/AAAAAAAARoQ/AHbeYQF09oAWLycmErpvAzEsTaOGM5m2QCLcBGAsYHQ/s16000/capa-inseto.png");
-}
-.pkmn-section .cardnormal {
-  background-image: url("https://i.ytimg.com/vi/ze6zcaemf7M/maxresdefault.jpg");
-  background-size: cover;
-}
-.pkmn-section .cardpoison {
-  background-image: url("https://e0.pxfuel.com/wallpapers/732/598/desktop-wallpaper-poison-types-in-pokemon-go-pvp-meta-analysis-per-league-pokemon-go-hub-thumbnail.jpg");
-  background-size: cover;
-}
-.pkmn-section .cardelectric {
-  background-image: url("https://i.ytimg.com/vi/VG0gh5GHoBU/maxresdefault.jpg");
-  background-size: cover;
-}
-.pkmn-section .cardground {
-  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2b96252f-36a9-4d78-a896-f31e2e20c0b6/d8jxrn2-dae37f01-f38e-42ce-879a-7aee5b44d477.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJiOTYyNTJmLTM2YTktNGQ3OC1hODk2LWYzMWUyZTIwYzBiNlwvZDhqeHJuMi1kYWUzN2YwMS1mMzhlLTQyY2UtODc5YS03YWVlNWI0NGQ0NzcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kY9ySWV7eccyhKZUPb9nLkuwtKWqdnVQiXRV4lEkMg0");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.pkmn-section .cardfairy {
-  background-image: url("https://wallpapercave.com/wp/wp11000651.jpg");
-  background-size: cover;
-}
-.pkmn-section .cardghost {
-  background-image: url("https://w0.peakpx.com/wallpaper/566/14/HD-wallpaper-pokemon-ghost-type-purple-purple-smoke-smoke.jpg");
-}
-.pkmn-section .cardpsychic {
-  background-image: url("https://e0.pxfuel.com/wallpapers/483/869/desktop-wallpaper-psychic-types-in-pokemon-go-pvp-meta-analysis-per-league-pokemon-go-hub.jpg");
-  background-size: cover;
-}
-.pkmn-section .carddark {
-  background-image: url("https://pokemongohub.net/wp-content/uploads/2019/01/Dark-Types.jpg");
-}
-.pkmn-section .cardice {
-  background-image: url("https://media.istockphoto.com/id/466513257/photo/image-of-light-blue-ice-design.webp?b=1&s=170667a&w=0&k=20&c=fzdm8jWAJO53AXqJ9bQ95Dz_pwN0NDv_FI_lzgHVjFw=");
-  background-size: cover;
-}
-.pkmn-section .carddragon {
-  background-image: url("https://pokemongohub.net/wp-content/uploads/2019/01/Dragon-Types.jpg");
-  background-size: cover;
-}
-.pkmn-section .cardsteel {
-  background-image: url("https://i.ytimg.com/vi/IK9TxCgn7IM/maxresdefault.jpg");
-  background-size: cover;
-}
-.pkmn-section .cardrock {
-  background-image: url("https://pokemongohub.net/wp-content/uploads/2019/01/Ground-Types.jpg");
-}
-.pkmn-section .cardfighting {
-  background-image: url("https://i.ytimg.com/vi/k7xQ8LWL50g/mqdefault.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.pkmn-section .cardflying {
-  background-image: url("https://pokemongohub.net/wp-content/uploads/2019/02/Flying-Types.jpg");
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -899,4 +695,230 @@ main {
 }
 .register-form button:hover {
   background-color: #45a049;
+}
+
+.pkmn-section {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 50px;
+  column-gap: 75px;
+}
+.pkmn-section .card-pkmn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 500px;
+  border: 2px solid;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: ease-out 0.3s;
+}
+.pkmn-section .card-pkmn .picture-pkmn {
+  width: 70%;
+  height: 50%;
+  background-size: cover;
+  background-position: center;
+}
+.pkmn-section .card-pkmn .data-pkmn {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+  border: 2px solid;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  color: white;
+}
+.pkmn-section .card-pkmn .data-pkmn .types-pkmn {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.pkmn-section .card-pkmn .data-pkmn .types-pkmn .type {
+  width: 80px;
+  padding: 5px;
+  border-radius: 5px;
+  filter: blur(1.5);
+}
+.pkmn-section .card-pkmn .data-pkmn .cri {
+  width: 75%;
+  background-color: transparent; /* Rend l'arrière-plan transparent */
+  border: none; /* Supprime la bordure par défaut */
+  outline: none;
+}
+.pkmn-section .card-pkmn .grass {
+  border: 3px green solid;
+  background-color: rgba(121, 199, 76, 0.8470588235);
+}
+.pkmn-section .card-pkmn .fire {
+  border: 3px tomato solid;
+  background-color: rgba(244, 125, 34, 0.8196078431);
+}
+.pkmn-section .card-pkmn .water {
+  background: rgba(44, 132, 226, 0.9843137255); /* Bleu pour l'élément eau */
+  border: 3px rgb(0, 113, 128) solid;
+}
+.pkmn-section .card-pkmn .bug {
+  border: 3px rgb(64, 128, 0) solid;
+  background-color: rgba(129, 199, 76, 0.862745098);
+}
+.pkmn-section .card-pkmn .normal {
+  border: 3px #b0b0b0 solid; /* Couleur gris-vert pour le type Normal */
+  background-color: rgba(168, 168, 120, 0.8392156863); /* Couleur du texte */
+}
+.pkmn-section .card-pkmn .poison {
+  border: 3px #af40ef solid; /* Couleur gris-vert pour le type Normal */
+  background-color: rgba(135, 66, 200, 0.8549019608); /* Couleur du texte */
+}
+.pkmn-section .card-pkmn .electric {
+  border: 3px #f8e700 solid; /* Couleur gris-vert pour le type Normal */
+  background-color: rgba(247, 208, 12, 0.862745098); /* Couleur du texte */
+}
+.pkmn-section .card-pkmn .ground {
+  border: 3px #895519 solid; /* Couleur gris-vert pour le type Normal */
+  background-color: rgba(160, 100, 63, 0.8274509804); /* Couleur du texte */
+}
+.pkmn-section .card-pkmn .fairy {
+  border: 3px #a75190 solid; /* Couleur gris-vert pour le type Normal */
+  background-color: rgba(243, 129, 253, 0.8235294118); /* Couleur du texte */
+}
+.pkmn-section .card-pkmn .psychic {
+  border: 3px #b70b3e solid; /* Couleur gris-vert pour le type Normal */
+  background-color: rgba(240, 3, 106, 0.8352941176); /* Couleur du texte */
+}
+.pkmn-section .card-pkmn .rock {
+  border: 3px solid #e45a14; /* Couleur gris-vert pour le type Normal */
+  background-color: rgba(242, 155, 84, 0.8274509804); /* Couleur du texte */
+}
+.pkmn-section .card-pkmn .ghost {
+  border: 3px solid #c595fc; /* Couleur gris-vert pour le type Normal */
+  background-color: rgba(114, 6, 246, 0.8117647059); /* Couleur du texte */
+  color: white;
+}
+.pkmn-section .card-pkmn .fighting {
+  border: 3px solid rgb(248, 128, 0);
+  background-color: rgba(255, 111, 0, 0.7529411765);
+}
+.pkmn-section .card-pkmn .steel {
+  border: 3px solid rgb(93, 92, 92);
+  background-color: rgba(140, 138, 138, 0.8901960784);
+}
+.pkmn-section .card-pkmn .dragon {
+  border: 3px solid rgb(108, 71, 255);
+  background-color: rgba(76, 0, 255, 0.8823529412);
+}
+.pkmn-section .card-pkmn .ice {
+  border: 3px solid rgb(71, 243, 255);
+  background-color: rgba(34, 230, 244, 0.8549019608);
+}
+.pkmn-section .card-pkmn .dark {
+  border: 3px solid rgb(255, 255, 255);
+  background-color: rgba(3, 4, 13, 0.8117647059);
+  color: white;
+}
+.pkmn-section .card-pkmn .flying {
+  border: 3px solid rgb(133, 229, 253);
+  background-color: rgba(129, 211, 255, 0.8470588235);
+}
+.pkmn-section .card-pkmn:hover {
+  border: 4px white solid;
+  scale: 1.05;
+  cursor: pointer;
+}
+.pkmn-section .cardgrass {
+  background-image: url("https://staticg.sportskeeda.com/editor/2021/04/9fe81-16173036977561-800.jpg?w=640");
+}
+.pkmn-section .cardfire {
+  background-image: url("https://w0.peakpx.com/wallpaper/247/374/HD-wallpaper-fire-energy-fire-card-pokemon.jpg");
+}
+.pkmn-section .cardwater {
+  background-image: url("https://i.ytimg.com/vi/9pyp6BXqcDM/maxresdefault.jpg");
+  background-size: cover;
+}
+.pkmn-section .cardbug {
+  background-image: url("https://1.bp.blogspot.com/-wXdSSoxscp8/YFkxtNTVnxI/AAAAAAAARoQ/AHbeYQF09oAWLycmErpvAzEsTaOGM5m2QCLcBGAsYHQ/s16000/capa-inseto.png");
+}
+.pkmn-section .cardnormal {
+  background-image: url("https://i.ytimg.com/vi/ze6zcaemf7M/maxresdefault.jpg");
+  background-size: cover;
+}
+.pkmn-section .cardpoison {
+  background-image: url("https://e0.pxfuel.com/wallpapers/732/598/desktop-wallpaper-poison-types-in-pokemon-go-pvp-meta-analysis-per-league-pokemon-go-hub-thumbnail.jpg");
+  background-size: cover;
+}
+.pkmn-section .cardelectric {
+  background-image: url("https://i.ytimg.com/vi/VG0gh5GHoBU/maxresdefault.jpg");
+  background-size: cover;
+}
+.pkmn-section .cardground {
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2b96252f-36a9-4d78-a896-f31e2e20c0b6/d8jxrn2-dae37f01-f38e-42ce-879a-7aee5b44d477.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJiOTYyNTJmLTM2YTktNGQ3OC1hODk2LWYzMWUyZTIwYzBiNlwvZDhqeHJuMi1kYWUzN2YwMS1mMzhlLTQyY2UtODc5YS03YWVlNWI0NGQ0NzcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kY9ySWV7eccyhKZUPb9nLkuwtKWqdnVQiXRV4lEkMg0");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pkmn-section .cardfairy {
+  background-image: url("https://wallpapercave.com/wp/wp11000651.jpg");
+  background-size: cover;
+}
+.pkmn-section .cardghost {
+  background-image: url("https://w0.peakpx.com/wallpaper/566/14/HD-wallpaper-pokemon-ghost-type-purple-purple-smoke-smoke.jpg");
+}
+.pkmn-section .cardpsychic {
+  background-image: url("https://e0.pxfuel.com/wallpapers/483/869/desktop-wallpaper-psychic-types-in-pokemon-go-pvp-meta-analysis-per-league-pokemon-go-hub.jpg");
+  background-size: cover;
+}
+.pkmn-section .carddark {
+  background-image: url("https://pokemongohub.net/wp-content/uploads/2019/01/Dark-Types.jpg");
+}
+.pkmn-section .cardice {
+  background-image: url("https://media.istockphoto.com/id/466513257/photo/image-of-light-blue-ice-design.webp?b=1&s=170667a&w=0&k=20&c=fzdm8jWAJO53AXqJ9bQ95Dz_pwN0NDv_FI_lzgHVjFw=");
+  background-size: cover;
+}
+.pkmn-section .carddragon {
+  background-image: url("https://pokemongohub.net/wp-content/uploads/2019/01/Dragon-Types.jpg");
+  background-size: cover;
+}
+.pkmn-section .cardsteel {
+  background-image: url("https://i.ytimg.com/vi/IK9TxCgn7IM/maxresdefault.jpg");
+  background-size: cover;
+}
+.pkmn-section .cardrock {
+  background-image: url("https://pokemongohub.net/wp-content/uploads/2019/01/Ground-Types.jpg");
+}
+.pkmn-section .cardfighting {
+  background-image: url("https://i.ytimg.com/vi/k7xQ8LWL50g/mqdefault.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pkmn-section .cardflying {
+  background-image: url("https://pokemongohub.net/wp-content/uploads/2019/02/Flying-Types.jpg");
+}
+
+.pagination-section {
+  margin: 30px;
+}
+.pagination-section a {
+  padding: 15px;
+  background-color: aquamarine;
+  text-decoration-line: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.pagination-section a:hover {
+  background-color: rgb(109, 236, 193);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }/*# sourceMappingURL=style.css.map */

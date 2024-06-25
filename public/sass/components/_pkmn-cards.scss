@@ -20,9 +20,9 @@
         border: 2px solid;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-
+        transition: ease-out 0.3s;
         .picture-pkmn {
-            width:60%;
+            width:70%;
             height:50%; 
             background-size:cover;
             background-position: center;
@@ -62,7 +62,7 @@
             }
         }
 
-        .grass {
+      .grass {
          
           border: 3px green solid;
           background-color: #79c74cd8;
@@ -80,7 +80,7 @@
           background-color: #81c74cdc;
       }
       .normal {
-          border: 3px #a8a878 solid; /* Couleur gris-vert pour le type Normal */
+          border: 3px #b0b0b0 solid; /* Couleur gris-vert pour le type Normal */
           background-color: #a8a878d6; /* Couleur du texte */
         }
         .poison {
@@ -96,11 +96,11 @@
           background-color: #a0643fd3; /* Couleur du texte */
         }
         .fairy {
-          border: 3px #a75190; /* Couleur gris-vert pour le type Normal */
+          border: 3px #a75190 solid; /* Couleur gris-vert pour le type Normal */
           background-color: #f381fdd2; /* Couleur du texte */
         }
         .psychic {
-          border: 3px #a90a3a; /* Couleur gris-vert pour le type Normal */
+          border: 3px #b70b3e solid; /* Couleur gris-vert pour le type Normal */
           background-color: #f0036ad5; /* Couleur du texte */
         }
         .rock {
@@ -137,7 +137,11 @@
           border: 3px solid rgb(133, 229, 253);
           background-color: #81d3ffd8;
       }
-        
+      &:hover {
+        border: 4px white solid;
+        scale: 1.05;
+        cursor: pointer;
+      }
 
     }
 

@@ -4,7 +4,7 @@ $title = "login";
 require_once __DIR__ . '../../partials/header.php';
 ?>
     <main>
-        <form id="loginForm" method="post" action="/pokedex-php/controllers/loginController.php">
+        <form id="loginForm" method="post" action="./controllers/loginController.php">
             <h2>Mon compte</h2>
 
             <label for="emailID">E-mail :</label>

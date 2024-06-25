@@ -20,7 +20,7 @@ function register($mail,$usrname,$password,$frstName,$lstName,$brthDate) {
         $stmt->bindParam(':brthdate', $brthDate);
         $stmt->bindValue(':user_role',$userrole = 1);
         $stmt->execute();
-        echo "<script>alert('User registered successfully.'); window.location.href = '?c=login';</script>";
+        echo "<script>alert('User registered successfully.'); window.location.href = 'http://localhost:5001/?c=login';</script>";
     } catch (PDOException $e) {
         // Handle the exception (e.g., log it, display an error message, etc.)
         echo "Error: " . $e->getMessage();
