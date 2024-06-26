@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (verifyCredentials($email, $password)) {
                 // Connexion réussie
                 echo 'its ok';
-                 header("Location: ../../");
+                //  header("Location: ../../");
                 exit();
             } else {
                 // Identifiants incorrects

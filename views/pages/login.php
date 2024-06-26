@@ -3,7 +3,7 @@ session_start();
 $title = "login";
 require_once __DIR__ . '../../partials/header.php';
 ?>
-<main>
+    <main>
 
     <?php
         if (isset($_SESSION['registration']) && $_SESSION['registration'] === true) { ?>
@@ -19,8 +19,8 @@ require_once __DIR__ . '../../partials/header.php';
 
 
 
-    <form id="loginForm" method="post" action="../pokedex-php/../../controllers/loginController.php">
-        <h2>Mon compte</h2>
+        <form id="loginForm" method="post" action="./../../controllers/loginController.php">
+            <h2>Mon compte</h2>
 
         <label for="emailID">E-mail :</label>
         <input type="email" name="email" id="emailID" placeholder="example@email.com" autocomplete="email">

@@ -16,7 +16,7 @@ function clean_encode_and_escape_text($text)
         
         function page1($offset = 0) {
             require("./Engine/connect.php");
-        
+            
             // Assurez-vous que l'offset est un entier positif
             $offset = intval($offset);
             if ($offset < 0) {
@@ -34,7 +34,7 @@ function clean_encode_and_escape_text($text)
                     $type = explode(', ', $pkmn['type']);
         ?>
                     <article class="card-pkmn card<?= lcfirst($type[0]) ?>">
-                        <div class="picture-pkmn" style="background-image: url('<?= $pkmn['image'] ?>');"></div>
+                        <div class="picture-pkmn" style="background-image: url(<?=$pkmn['image']?>);"></div>
                         <div class="data-pkmn <?= lcfirst($type[0]) ?>">
                             <h2><?= $pkmn['name'] ?> n°<?= $pkmn['pokedexNumber'] ?></h2>
                             <div class="types-pkmn">
@@ -52,7 +52,7 @@ function clean_encode_and_escape_text($text)
                                 <source src="<?= $pkmn['cri'] ?>" type="audio/mpeg">
                                 Your browser does not support the audio element.
                             </audio> -->
-                            <a href="/?c=pokemon&name=<?= $pkmn['name'] ?>">Voir</a>
+                            <a href="http://localhost:5001/views/pages/search.php?query=<?= $pkmn['name'] ?>">Voir</a>
                         </div>
                     </article>
         <?php
