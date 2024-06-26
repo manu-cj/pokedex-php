@@ -1113,32 +1113,32 @@ ul {
   outline: none;
 }
 .pkmn-section .card-pkmn .grass {
-  border: 3px green solid;
-  background-color: rgba(121, 199, 76, 0.8470588235);
+  border: 3px rgb(106, 243, 106) solid;
+  background-color: rgba(74, 202, 0, 0.8745098039);
 }
 .pkmn-section .card-pkmn .fire {
-  border: 3px tomato solid;
-  background-color: rgba(244, 125, 34, 0.8196078431);
+  border: 3px rgb(255, 175, 71) solid;
+  background-color: rgba(244, 65, 34, 0.8196078431);
 }
 .pkmn-section .card-pkmn .water {
   background: rgba(44, 132, 226, 0.9843137255); /* Bleu pour l'élément eau */
-  border: 3px rgb(0, 113, 128) solid;
+  border: 3px rgb(156, 243, 255) solid;
 }
 .pkmn-section .card-pkmn .bug {
-  border: 3px rgb(64, 128, 0) solid;
-  background-color: rgba(129, 199, 76, 0.862745098);
+  border: 3px rgb(104, 188, 2) solid;
+  background-color: rgba(162, 199, 76, 0.862745098);
 }
 .pkmn-section .card-pkmn .normal {
-  border: 3px #b0b0b0 solid; /* Couleur gris-vert pour le type Normal */
+  border: 3px #e3dcdc solid; /* Couleur gris-vert pour le type Normal */
   background-color: rgba(168, 168, 120, 0.8392156863); /* Couleur du texte */
 }
 .pkmn-section .card-pkmn .poison {
-  border: 3px #af40ef solid; /* Couleur gris-vert pour le type Normal */
+  border: 3px #c060f8 solid; /* Couleur gris-vert pour le type Normal */
   background-color: rgba(135, 66, 200, 0.8549019608); /* Couleur du texte */
 }
 .pkmn-section .card-pkmn .electric {
-  border: 3px #f8e700 solid; /* Couleur gris-vert pour le type Normal */
-  background-color: rgba(247, 208, 12, 0.862745098); /* Couleur du texte */
+  border: 3px #e39400 solid; /* Couleur gris-vert pour le type Normal */
+  background-color: rgba(204, 184, 6, 0.8588235294); /* Couleur du texte */
 }
 .pkmn-section .card-pkmn .ground {
   border: 3px #895519 solid; /* Couleur gris-vert pour le type Normal */
@@ -1162,15 +1162,15 @@ ul {
   color: white;
 }
 .pkmn-section .card-pkmn .fighting {
-  border: 3px solid rgb(248, 128, 0);
+  border: 3px solid rgb(248, 157, 0);
   background-color: rgba(255, 111, 0, 0.7529411765);
 }
 .pkmn-section .card-pkmn .steel {
-  border: 3px solid rgb(93, 92, 92);
-  background-color: rgba(140, 138, 138, 0.8901960784);
+  border: 3px solid rgb(203, 202, 202);
+  background-color: rgba(121, 121, 121, 0.8901960784);
 }
 .pkmn-section .card-pkmn .dragon {
-  border: 3px solid rgb(108, 71, 255);
+  border: 3px solid rgb(50, 222, 119);
   background-color: rgba(76, 0, 255, 0.8823529412);
 }
 .pkmn-section .card-pkmn .ice {
@@ -1183,7 +1183,7 @@ ul {
   color: white;
 }
 .pkmn-section .card-pkmn .flying {
-  border: 3px solid rgb(133, 229, 253);
+  border: 3px solid rgb(0, 237, 241);
   background-color: rgba(129, 211, 255, 0.8470588235);
 }
 .pkmn-section .card-pkmn:hover {
@@ -1263,14 +1263,17 @@ ul {
   margin: 30px;
 }
 .pagination-section a {
+  width: 30px;
+  height: 30px;
   padding: 15px;
-  background-color: aquamarine;
+  background-color: #3c59a5;
   text-decoration-line: none;
-  color: black;
+  color: #ffcc03;
   font-weight: bold;
   border-radius: 5px;
 }
 .pagination-section a:hover {
-  background-color: rgb(109, 236, 193);
+  background-color: #537fef;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  scale: 1.05;
 }/*# sourceMappingURL=style.css.map */

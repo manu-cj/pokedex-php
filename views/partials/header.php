@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($title); ?> - Pokedex</title>
-    <link href="http://localhost/Becode/pokedex-php/public/css/style.css" type="text/css" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../public/img/pokedex-icon.png">
+    <link href="public/css/style.css" type="text/css" rel="stylesheet">
+    <script defer src="https://kit.fontawesome.com/d8438e7f2f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>

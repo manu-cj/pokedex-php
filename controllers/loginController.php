@@ -26,7 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Appeler la fonction pour vérifier les identifiants
             if (verifyCredentials($email, $password)) {
                 // Connexion réussie
-                header("Location: ?c=home");
+                echo 'its ok';
+                 header("Location: ../../");
                 exit();
             } else {
                 // Identifiants incorrects
@@ -37,7 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Rediriger vers la page de connexion si des erreurs sont présentes
     if (!empty($_SESSION['errors'])) {
-        header("Location: ?c=login");
+        echo "it's not ok";
+        // header("Location: ?c=login");
         exit();
     }
 } else {
