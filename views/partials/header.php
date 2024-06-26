@@ -43,7 +43,5 @@
     </div>
 </header>
 
-<main class="">
-</main>
     
 </body>

@@ -54,7 +54,7 @@ if (!empty($query)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results - Pokedex</title>
-    <link href="../../assets/css/style.css" type="text/css" rel="stylesheet">
+    <link href="../../public/css/style.css" type="text/css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="../../public/img/pokedex-icon.png">
 </head>
 
@@ -73,8 +73,9 @@ if (!empty($query)) {
                     <div class="search-container">
                         <?php while ($row = $result->fetch_assoc()): ?> 
                             <div class="pokemon-info">
-                                <h2><?php echo htmlspecialchars($row['name']); ?></h2>
-                                <p><strong>Type:</strong> <?php echo htmlspecialchars($row['type']); ?></p>
+                                <h2><?php echo $row['name']; ?></h2>
+                                <?php $type = explode(', ', $row['type']); ?>
+                                <p><strong>Type:</strong> <?php echo htmlspecialchars($type[0]); ?>  <?php echo htmlspecialchars($type[1]); ?></p>
                                 <p><strong>Description:</strong> <?php echo clean_encode_and_escape_text($row['description']); ?></p>
 
                                 <div class="stat-bars">
@@ -94,7 +95,6 @@ if (!empty($query)) {
                                 render_stat_bar('Speed', $row['speed'], 'speed-bar');
                                 ?>
                             </div>
-
                                 <p><strong>Evolution:</strong> <?php echo htmlspecialchars($row['gen']); ?></p>
                             </div>
                             <div class="pokemon-image">
