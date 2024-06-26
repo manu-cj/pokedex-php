@@ -18,6 +18,9 @@ require_once __DIR__ . '../../partials/header.php';
         <label for="password">your password</label>
         <input type="password" name="password">
 
+        <label for="confpassword">confirm password</label>
+        <input type="password" name="confpassword">
+
         <label for="first_name">First name</label>
         <input type="text" name="first_name">
 
