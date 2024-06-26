@@ -34,6 +34,8 @@ switch ($c) {
     case 'register':
         getPath("register");
         break;
+    case 'search':
+        getPath("search");
     case 'connect':
         require __DIR__ . "./controllers/loginController.php";
         break;
