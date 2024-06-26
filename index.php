@@ -39,7 +39,7 @@ switch ($c) {
         break;
     
     default:
-        getPath("404");
+        require __DIR__ . "/views/errors/404.php";
         break;
 }
 
@@ -49,7 +49,7 @@ if (isset($_GET['a'])) {
 
 switch ($a) {
     case 'connect':
-        getAction("LoginController");
+        getAction("loginController");
         break;
     case 'register':
         getAction("RegisterController");

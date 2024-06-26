@@ -26,7 +26,7 @@ if (isset($_POST['register'])) {
         } else {
             // Check for errors
             if (isset($errors) && count($errors) > 0) {
-                header('location ?c=login');
+                header('location: ?c=login');
             } else {
                 require('../model/registerManager.php');
                 register($mail,$usrname,$password,$frstName,$lstName,$brthDate);
