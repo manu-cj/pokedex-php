@@ -1,5 +1,5 @@
 body {
-    background-color: #f1f1f1;
+    background-color: transparent;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
       color: #3c59a5;
@@ -9,3 +9,7 @@ body {
     font-weight: bold;
    
   }
+
+main {
+    @include flex(column,center,center);
+}

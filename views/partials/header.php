@@ -5,9 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($title); ?> - Pokedex</title>
-    <link href="../../assets/css/style.css" type="text/css" rel="stylesheet">
+    <link href="./../../public/css/style.css" type="text/css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="../../public/img/pokedex-icon.png">
 </head>
+
+<!-- <header>
+
+    <nav>
+        <a href="?c=register">register</a>
+        <a href="?c=login">login</a>
+    </nav>
+
+</header> -->
 
 <body>
 <header>
@@ -23,16 +32,14 @@
             </form>
         </div>
         <nav class="navigation">
-            <ul>
-                <?php if (isset($_SESSION['user_id'])): ?>
-                    <li><a class="user-identification"href="profile.php"><!--RegisterManager.php???-->My account</a></li>
-                    <li><a class="user-identification"href="logout.php">Logout</a></li>
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                    <a class="user-identification"href="profile.php"><!--RegisterManager.php???-->My account</a>
+                    <a class="user-identification"href="logout.php">Logout</a>
                 <?php else: ?>
-                    <li><a class="user-identification"href="login.php">Login</a></li>
-                    <li><a class="user-identification"href="register.php">Register</a></li>
+                    <a class="user-identification"href="login.php">Login</a>
+                    <a class="user-identification"href="register.php">Register</a>
                 <?php endif; ?>
-            </ul>
-        </nav>
+                   </nav>
     </div>
 </header>
 
