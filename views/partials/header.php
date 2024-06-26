@@ -13,18 +13,18 @@
 <header>
 <img class="pokemon-logo" src="../../public/img/pokemon-logo.png" alt="Pokemon logo">
     <div class="header-container">
-        <div class="logo">            
-            <h1><a class="pokedex-home" href="/">Pokedex</a></h1>
+        <div>            
+            <h1><a class="pokedex-home" href="../pages/index.php">Pokedex</a></h1>
         </div>
-        <div class="search">
-            <form action="../pages/search.php" method="get">
-                <input type="text" name="query" placeholder="Search...">
+        <div>
+            <form class="search" action="../pages/search.php" method="get">
+                <input type="text" name=" query" placeholder="Search...">
                 <button class="search-button" type="submit">Search</button>
             </form>
         </div>
         <nav class="navigation">
                     <?php if (isset($_SESSION['user_id'])): ?>
-                    <a class="user-identification"href="profile.php"><!--RegisterManager.php???-->My account</a>
+                    <a class="user-identification"href="profile.php">My account</a>
                     <a class="user-identification"href="logout.php">Logout</a>
                 <?php else: ?>
                     <a class="user-identification"href="login.php">Login</a>

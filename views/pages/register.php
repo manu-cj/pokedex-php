@@ -6,7 +6,7 @@ require_once __DIR__ . '../../partials/header.php';
 
 <main>
     
-    <form method="post" class="register-form" action="./controllers/RegisterController.php" >
+    <form method="post" class="register-form" action="./../../controllers/RegisterController.php" >
 
         
         <label for="mail">Your mail</label>

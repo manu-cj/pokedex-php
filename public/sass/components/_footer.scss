@@ -1,0 +1,58 @@
+footer {
+    background-color:  #3c59a5;
+    border-top: 1dvw solid #ffcc03;
+    color: #ffcc03;
+}
+
+.svg {
+    filter: brightness(0) saturate(100%) invert(79%) sepia(73%) saturate(1680%) hue-rotate(351deg) brightness(103%) contrast(108%);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1dvw auto;
+    max-width: 90dvw;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1dvw auto;
+   }
+
+.pkmnlogo {
+    width: 8dvw;
+    padding: 1dvw;
+}
+
+.rights {
+    padding: 1dvw;
+}
+
+.team {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+}
+
+.teamplayer {
+    padding: 1dvw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+.location {
+    height: 20px;
+}

@@ -1,3 +1,4 @@
+
 <?php
 // Connecting to the database
 $servername = "127.0.0.1";
@@ -47,18 +48,6 @@ if (!empty($query)) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Results - Pokedex</title>
-    <link href="../../public/css/style.css" type="text/css" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../public/img/pokedex-icon.png">
-</head>
-
-<body>
     <?php include '../partials/header.php'; ?>
 
     <main>
@@ -115,7 +104,9 @@ if (!empty($query)) {
             ?>
         </div>
     </main>
-
+    <?php
+require_once __DIR__ . '../../partials/footer.php';
+?>
 </body>
 </html>
 

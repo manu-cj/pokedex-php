@@ -5,27 +5,28 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 70dvw;
+    width: 80dvw;
     margin: 0 auto;
 }
 
 .pokemon-info {
-    width: 30dvw;
+    width: 36dvw;
     background-color: #fff;
     color: #4B5563;
-    border-radius: 5px;
+    border-radius: 1dvw;
     padding: 15px;
     font-size: 10px;
-    //box-shadow: 1px 1px 5px #4B5563;
-
-}
+    }
 
 .pokemon-image {
-    width: 30dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 36dvw;
 }
 
 .card-image {
-    width: 25dvw;
+    width: 30dvw;
     z-index: 1;
     position: relative;
 }
@@ -84,6 +85,15 @@
     
     font-size: 10px;
     color: #000;
+}
+
+.pokemon-type{
+    margin: 1dvw 0;
+}
+
+.type-color {
+    padding: 3px;
+    border-radius: 3px;
 }
 
 .Grass {
@@ -158,7 +168,14 @@
     background-color: #03040dcf;
 }
 
-.type-color {
-    padding: 3px;
-    border-radius: 3px;
+@media (max-width: 600px) {
+
+    .pokemon-info {
+        width: 50dvw;
+    }
+
+    .pokemon-image {
+        width: 20dvw;
+    }
 }
+
