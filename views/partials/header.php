@@ -9,15 +9,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../public/img/pokedex-icon.png">
 </head>
 
-<!-- <header>
-
-    <nav>
-        <a href="?c=register">register</a>
-        <a href="?c=login">login</a>
-    </nav>
-
-</header> -->
-
 <body>
 <header>
 <img class="pokemon-logo" src="../../public/img/pokemon-logo.png" alt="Pokemon logo">

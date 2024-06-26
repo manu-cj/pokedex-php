@@ -75,7 +75,12 @@ if (!empty($query)) {
                             <div class="pokemon-info">
                                 <h2><?php echo $row['name']; ?></h2>
                                 <?php $type = explode(', ', $row['type']); ?>
-                                <p><strong>Type:</strong> <?php echo htmlspecialchars($type[0]); ?>  <?php echo htmlspecialchars($type[1]); ?></p>
+                            <div class="pokemon-type"><strong>Type:</strong>
+                              <?php foreach ($type as $singleType): ?>
+                              <span class="type-color <?php echo htmlspecialchars($singleType); ?>"><?php echo htmlspecialchars($singleType); ?></span>
+                              <?php endforeach; ?>
+                            </div>
+
                                 <p><strong>Description:</strong> <?php echo clean_encode_and_escape_text($row['description']); ?></p>
 
                                 <div class="stat-bars">

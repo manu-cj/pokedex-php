@@ -886,6 +886,83 @@ ul {
   color: #000;
 }
 
+.Grass {
+  background-color: rgba(121, 199, 76, 0.8470588235);
+}
+
+.Poison {
+  background-color: rgba(135, 66, 200, 0.8549019608);
+}
+
+.Fire {
+  background-color: rgba(255, 75, 25, 0.8196078431);
+}
+
+.Flying {
+  background-color: rgba(129, 211, 255, 0.8470588235);
+}
+
+.Water {
+  background-color: rgba(44, 132, 226, 0.9843137255);
+}
+
+.Bug {
+  background-color: rgba(129, 199, 76, 0.862745098);
+}
+
+.Normal {
+  background-color: rgba(168, 168, 120, 0.8392156863);
+}
+
+.Electric {
+  background-color: rgba(247, 208, 12, 0.862745098);
+}
+
+.Ground {
+  background-color: rgba(160, 100, 63, 0.8274509804);
+}
+
+.Fairy {
+  background-color: rgba(243, 129, 253, 0.8235294118);
+}
+
+.Fighting {
+  background-color: rgba(255, 111, 0, 0.7529411765);
+}
+
+.Psychic {
+  background-color: rgba(240, 3, 106, 0.8352941176);
+}
+
+.Rock {
+  background-color: rgba(242, 155, 84, 0.8274509804);
+}
+
+.Steel {
+  background-color: rgba(140, 138, 138, 0.8901960784);
+}
+
+.Ice {
+  background-color: rgba(34, 230, 244, 0.8549019608);
+}
+
+.Ghost {
+  background-color: rgba(114, 6, 246, 0.8117647059);
+}
+
+.Dragon {
+  background-color: rgba(76, 0, 255, 0.8823529412);
+}
+
+.Dark {
+  background-color: rgba(3, 4, 13, 0.8117647059);
+}
+
+.type-color {
+  padding: 3px;
+  border-radius: 3px;
+}
+
 #loginForm {
   display: flex;
   flex-direction: column;
