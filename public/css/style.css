@@ -1000,6 +1000,9 @@ ul {
   padding: 5px;
   border-radius: 4px;
   animation: myAnim 2s ease 0s 1 normal forwards;
+  position: fixed;
+  top: 2vh;
+  right: 2vw;
 }
 @keyframes myAnim {
   0% {
