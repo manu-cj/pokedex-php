@@ -15,7 +15,7 @@
 <img class="pokemon-logo" src="../../public/img/pokemon-logo.png" alt="Pokemon logo">
     <div class="header-container">
         <div class="logo">            
-            <h1><a class="pokedex-home" href="/">Pokedex</a></h1>
+            <h1><a class="pokedex-home" href="?c=home">Pokedex</a></h1>
         </div>
         <div class="search">
             <form action="http://localhost:5001/views/pages/search.php" method="get">

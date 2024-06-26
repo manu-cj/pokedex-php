@@ -4,7 +4,7 @@ session_start();
 $title = "Home";
 print_r($_SESSION['user']);
 require_once __DIR__ . '../../partials/header.php';
-
+session_destroy();
 
 ?>
 
