@@ -5,17 +5,21 @@ require_once __DIR__ . '../../partials/header.php';
 ?>
     <main>
 
-    <?php 
+    <?php
         if (isset($_SESSION['registration']) && $_SESSION['registration'] === true) { ?>
-        
-            <div class="notification">
-                <p>registered succesfully</p>
-            </div>
-            
-        <?php }?>
+
+            <div class="notification">registered successfully</div>
+
+    <?php   
+            sleep(2);
+
+            $_SESSION['registration'] = false;
+       }
+    ?>
 
 
-        <form id="loginForm" method="post" action="/pokedex-php/controllers/loginController.php">
+
+        <form id="loginForm" method="post" action="./../../pokedex-php/controllers/loginController.php">
             <h2>Mon compte</h2>
 
             <label for="emailID">E-mail :</label>
