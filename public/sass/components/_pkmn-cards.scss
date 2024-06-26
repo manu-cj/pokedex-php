@@ -64,32 +64,32 @@
 
       .grass {
          
-          border: 3px green solid;
-          background-color: #79c74cd8;
+          border: 3px rgb(106, 243, 106) solid;
+          background-color: #4aca00df;
       }
       .fire {
-          border: 3px tomato solid;
-          background-color: #f47d22d1;
+          border: 3px rgb(255, 175, 71) solid;
+          background-color: #f44122d1;
       }
       .water {
           background: #2c84e2fb ; /* Bleu pour l'élément eau */
-          border: 3px rgb(0, 113, 128) solid;
+          border: 3px rgb(156, 243, 255) solid;
         }
       .bug {
-          border: 3px rgb(64, 128, 0) solid;
-          background-color: #81c74cdc;
+          border: 3px rgb(104, 188, 2) solid;
+          background-color: #a2c74cdc;
       }
       .normal {
-          border: 3px #b0b0b0 solid; /* Couleur gris-vert pour le type Normal */
+          border: 3px #e3dcdc solid; /* Couleur gris-vert pour le type Normal */
           background-color: #a8a878d6; /* Couleur du texte */
         }
         .poison {
-          border: 3px #af40ef solid; /* Couleur gris-vert pour le type Normal */
+          border: 3px #c060f8 solid; /* Couleur gris-vert pour le type Normal */
           background-color: #8742c8da; /* Couleur du texte */
         }
         .electric {
-          border: 3px #f8e700 solid; /* Couleur gris-vert pour le type Normal */
-          background-color: #f7d00cdc; /* Couleur du texte */
+          border: 3px #e39400 solid; /* Couleur gris-vert pour le type Normal */
+          background-color: #ccb806db; /* Couleur du texte */
         }
         .ground {
           border: 3px #895519 solid; /* Couleur gris-vert pour le type Normal */
@@ -113,15 +113,15 @@
           color: white;
         }
         .fighting {
-          border: 3px solid rgb(248, 128, 0);
+          border: 3px solid rgb(248, 157, 0);
           background-color: #ff6f00c0;
       }
       .steel {
-          border: 3px solid rgb(93, 92, 92);
-          background-color: #8c8a8ae3;
+          border: 3px solid rgb(203, 202, 202);
+          background-color: #797979e3;
       }
       .dragon {
-          border: 3px solid rgb(108, 71, 255);
+          border: 3px solid rgb(50, 222, 119);
           background-color: #4c00ffe1;
       }
       .ice {
@@ -134,7 +134,7 @@
           color: white;
       }
       .flying {
-          border: 3px solid rgb(133, 229, 253);
+          border: 3px solid rgb(0, 237, 241);
           background-color: #81d3ffd8;
       }
       &:hover {
