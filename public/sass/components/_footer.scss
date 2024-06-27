@@ -2,6 +2,8 @@ footer {
     background-color:  #3c59a5;
     border-top: 1dvw solid #ffcc03;
     color: #ffcc03;
+    width: 100dvw;
+    margin-top: 1.5dvw;
 }
 
 .svg {
@@ -23,6 +25,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1dvw;
    }
 
 .pkmnlogo {
@@ -60,3 +63,20 @@ footer {
     margin-right: 1dvw;
 }
 
+@media (max-width: 768px) {
+
+    .footer-container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contacts {
+        margin: 1.5dvw 0;
+    }
+
+    .team {
+        margin-top: 2dvw;
+    }
+
+}
