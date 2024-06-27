@@ -1,6 +1,11 @@
 #userList {
+    ul {
+         @include flex(column,flex-start,center);
+    }
+
     li {
-        margin-right:25px;
+        margin-top:25px;
+        list-style-type: none;
     }
 
     input[type="button"] {

@@ -643,19 +643,6 @@ main {
   transition: 0.3s;
 }
 
-li {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
 .header-container {
   display: flex;
   flex-direction: row;
@@ -1320,8 +1307,15 @@ ul {
   scale: 1.05;
 }
 
+#userList ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 #userList li {
-  margin-right: 25px;
+  margin-top: 25px;
+  list-style-type: none;
 }
 #userList input[type=button] {
   margin-right: 5px;

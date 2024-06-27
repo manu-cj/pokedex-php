@@ -61,7 +61,9 @@ switch ($a) {
     case 'register':
         getAction("RegisterController");
         break;
-    
+    case 'edit':
+        getAction("editController");
+        break;
     default:
         getPath("404");
         break;

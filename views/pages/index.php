@@ -10,12 +10,13 @@ require_once __DIR__ . '../../partials/header.php';
 
 <main>
 <h1>Pokedex - Homepage</h1>
-<p>Hello <strong><?php echo $_SESSION['user'][0]; ?></p></strong>
-<section class="pkmn-section">
-    <?php
+
+<?php
+if (isset($_SESSION['user'])):
+    echo "<p>Hello <strong>" . $_SESSION['user'][0] . "</p></strong>";
+endif;
    
     require('./model/allpkmnManager.php');
-
 
     $page = $_GET['page'];
 

@@ -36,9 +36,18 @@ try {
         foreach ($users as $user) {
             // Affichage de chaque utilisateur
             ?>
-                <li><?php echo $user['username'];?></li>
-                <input type="button" value="edit">
-                <input type="button" value="ban">
+                <li><?php echo $user['first_name'].' '.$user['last_name'];?>
+                <form method="POST" action="" style="display:inline;">
+                    <input type="hidden" name="user_token" value="<?= $user['verification_token']; ?>">
+                    <input type="hidden" name="action" value="edit">
+                    <input type="submit" value="edit">
+                </form>
+                <form method="POST" action="" style="display:inline;">
+                    <input type="hidden" name="user_token" value="<?= $user['verification_token']; ?>">
+                    <input type="hidden" name="action" value="ban">
+                    <input type="submit" value="ban">
+                </form>
+                </li>
             <?php
         }
     } else {
@@ -47,3 +56,35 @@ try {
     ?>
     </ul>
 </main>
+<?php
+require_once __DIR__ . '../../partials/footer.php';
+?>
+</body>
+</html>
+<?php
+// Gérer les actions
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['action']) && isset($_POST['user_id'])) {
+        $action = $_POST['action'];
+        $userToken = $_POST['user_token'];
+
+        if ($action == 'edit') {
+            // Logique pour éditer l'utilisateur
+            // Vous pouvez rediriger vers une page d'édition ici
+            $_SESSION['editUser'] = $userToken;
+            header('Location: ./../../controllers/editController.php');
+            exit;
+        } elseif ($action == 'ban') {
+            // Logique pour bannir l'utilisateur
+            $sql = 'UPDATE users SET is_active = 0 WHERE id = :id';
+            $update = $conn->prepare($sql);
+            $update->bindParam(':id', $userId);
+            if ($update->execute()) {
+                echo "Utilisateur banni avec succès.";
+            } else {
+                echo "Échec du bannissement de l'utilisateur.";
+            }
+        }
+    }
+}
+?>
