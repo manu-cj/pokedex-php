@@ -4,13 +4,13 @@ session_start();
 $title = "Home";
 print_r($_SESSION['user']);
 require_once __DIR__ . '../../partials/header.php';
-session_destroy();
+
 
 ?>
 
 <main>
 <h1>Pokedex - Homepage</h1>
-<p>Hello <strong><?php echo $user['name'] ?></p></strong>
+<p>Hello <strong><?php echo $_SESSION['user'][0]; ?></p></strong>
 <section class="pkmn-section">
     <?php
    

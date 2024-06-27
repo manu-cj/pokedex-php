@@ -22,6 +22,51 @@
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         transition: ease-out 0.3s;
 
+        
+        
+        .header-card {
+          width: 100%;
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+          display: flex;
+          flex-direction: row;
+          border: 3px;
+          border-bottom: none;
+          .control {
+            width: 10%;
+            height: 25px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            padding: 5px;
+            button {
+              background: none;
+              border: none;
+              i {
+                font-size: x-large;
+                color: white;
+                transition: 1 ease-in;
+                margin-top: 5px;
+                cursor: pointer;
+                &:hover {
+                  color: rgb(255, 187, 0);
+                  scale: 1.1;
+                }
+              }
+            } 
+          }
+          .header-data {
+            width: 100%;
+            color: white;
+            padding: 5px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: end;
+          }
+        }
+
 
 
         .grass {
@@ -121,8 +166,8 @@
             gap: 5px;
             text-align: center;
             border: 2px solid;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
             box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
             color: white;
 
