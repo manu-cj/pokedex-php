@@ -1,0 +1,15 @@
+#userList {
+    ul {
+         @include flex(column,flex-start,center);
+    }
+
+    li {
+        margin-top:25px;
+        list-style-type: none;
+    }
+
+    input[type="button"] {
+        @extend .pointer;
+        margin-right:5px;
+    }
+}

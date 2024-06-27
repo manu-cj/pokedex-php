@@ -1,3 +1,4 @@
+
 <?php
 // Connecting to the database
 // $servername = "db";
@@ -72,8 +73,8 @@ if (!empty($query)) {
                                 <?php
                                 function render_stat_bar($label, $value, $class) {
                                     echo "<div class='stat-label'><p>$label</p></div>";
-                                    echo "<div class='stat-bar'>                                    
-                                    <div class='stat-bar-inner $class' style='width: " . htmlspecialchars($value) . "%;'></div>
+                                    echo "<div class='stat-bar' title=". htmlspecialchars($value) .">                                    
+                                    <div class='stat-bar-inner $class' style='width: " . htmlspecialchars($value/2) . "%;'></div>
                                   </div>";
                                 }
                                 render_stat_bar('HP', $row['hp'], 'hp-bar');
@@ -97,6 +98,9 @@ if (!empty($query)) {
             <?php endif; ?>
         </div>
     </main>
+    <?php
+require_once __DIR__ . '../../partials/footer.php';
+?>
 </body>
 </html>
 

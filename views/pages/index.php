@@ -3,19 +3,21 @@
 session_start();
 $title = "Home";
 print_r($_SESSION['user']);
+print_r($_SESSION['favorite']);
 require_once __DIR__ . '../../partials/header.php';
-session_destroy();
+
 
 ?>
 
 <main>
 <h1>Pokedex - Homepage</h1>
-<p>Hello <strong><?php echo $user['name'] ?></p></strong>
-<section class="pkmn-section">
-    <?php
+
+<?php
+if (isset($_SESSION['user'])):
+    echo "<p>Hello <strong>" . $_SESSION['user'][0] . "</p></strong>";
+endif;
    
     require('./model/allpkmnManager.php');
-
 
     $page = $_GET['page'];
 
