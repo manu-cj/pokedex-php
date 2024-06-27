@@ -17,8 +17,8 @@
         <div class="logo">            
             <h1><a class="pokedex-home" href="?c=home">Pokedex</a></h1>
         </div>
-        <div class="search">
-            <form action="http://localhost:5001/views/pages/search.php" method="get">
+        <div>
+            <form class="search" action="http://localhost:5001/views/pages/search.php" method="get">
                 <input type="text" name="query" placeholder="Search...">
                 <button class="search-button" type="submit">Search</button>
             </form>

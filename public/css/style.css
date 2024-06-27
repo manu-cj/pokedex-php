@@ -113,7 +113,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -821,7 +822,7 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 1dvw auto 3dvw;
+    align-content: center;
   }
   .pokedex-home {
     margin: 1dvw auto;
@@ -1221,7 +1222,8 @@ h1 {
   align-items: center;
   align-content: center;
   row-gap: 50px;
-  column-gap: 75px;
+  -moz-column-gap: 75px;
+       column-gap: 75px;
 }
 .pkmn-section .card-pkmn {
   display: flex;
