@@ -3,7 +3,7 @@
     @include box(300px,auto);
     padding:30px;
     margin-top: 25px;
-    border:solid 1px black;
+    background-color: #fff;
     border-radius: 30px;
 
     h2 {
@@ -23,10 +23,14 @@
         @extend .pointer;
         border:none;
         padding: 10px;
+        border-radius: 4px;
+        background-color: #3c59a5;
+        color: #ffcc03;
+        cursor: pointer;
     }
     button:hover {
         background-color: rgb(160, 160, 217);
-        border-radius: 20px;
+        border-radius: 10px;
     }
 }
 .notification {
