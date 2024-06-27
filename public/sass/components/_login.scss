@@ -33,3 +33,27 @@
         border-radius: 10px;
     }
 }
+.notification {
+
+    background-color:#ffcc03;
+    color:  #3c59a5 ;
+    padding: 5px;
+    border-radius: 4px;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+
+    @keyframes myAnim {
+        0% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    
+        50% {
+            opacity: 1; // Maintain opacity for half of the animation duration
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+    }
+}

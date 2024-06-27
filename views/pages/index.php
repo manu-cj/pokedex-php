@@ -2,8 +2,9 @@
 
 session_start();
 $title = "Home";
+print_r($_SESSION['user']);
 require_once __DIR__ . '../../partials/header.php';
-
+session_destroy();
 
 ?>
 
@@ -139,7 +140,7 @@ require_once __DIR__ . '../../partials/header.php';
     <?php
 
 if ($page <= 5) {
-    $start = 0;
+    $start = 1;
 } elseif ($page > 5 && $page <= 10) {
     $start = 5;
 } elseif ($page > 10 && $page <= 15) {
@@ -151,16 +152,45 @@ if ($page <= 5) {
 } elseif ($page > 25 && $page <= 34) {
     $start = 25;
 } else {
-    $start = 0; // Si $page dépasse 34, par exemple, on peut ajuster cette valeur par défaut
+    $start = 1;
 }
 
-// Générer les liens
+if ($page > 14) {
+    ?>
+        <a href="?c=home&page=<?= 1 ?>" title="First page"><i class="fas fa-angle-double-left"></i></a>
+
+    <?php
+}
+
+if ($page > 1) {
+    ?>
+        <a href="?c=home&page=<?= $page-=1 ?>"><i class="fas fa-caret-left"></i></a>
+
+    <?php
+}
+
+
 for ($i = $start; $i < min($start + 10, 35); $i++) {
     ?>
     <a href="?c=home&page=<?= $i ?>"><?= $i ?></a>
+    
+
     <?php
 }
+if (!isset($page)) {
+    $page = 1;
+}
        
+    ?>
+
+    <a href="?c=home&page=<?= $page+=1 ?>"><i class="fas fa-caret-right"></i></a>
+    <?php
+if ($page < 14) {
+    ?>
+        <a href="?c=home&page=<?= 34 ?>" title="Last page"><i class="fas fa-angle-double-right"></i></a>
+
+    <?php
+}
     ?>
 </section>
 </main>

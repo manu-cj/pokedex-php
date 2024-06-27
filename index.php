@@ -34,8 +34,10 @@ switch ($c) {
     case 'register':
         getPath("register");
         break;
-    case 'page2':
-        getPath("page2");
+    case 'search':
+        getPath("search");
+    case 'connect':
+        require __DIR__ . "./controllers/loginController.php";
         break;
     
     default:
