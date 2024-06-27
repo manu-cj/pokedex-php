@@ -1162,7 +1162,7 @@ h1 {
   color: #3c59a5;
   padding: 5px;
   border-radius: 4px;
-  animation: myAnim 2s ease 0s 1 normal forwards;
+  animation: myAnim 5s ease 0s 1 normal forwards;
 }
 @keyframes myAnim {
   0% {
@@ -1257,15 +1257,19 @@ h1 {
   border: none;
 }
 .pkmn-section .card-pkmn .header-card .control button i {
+  margin: 5px;
   font-size: x-large;
   color: white;
   transition: 1 ease-in;
-  margin-top: 5px;
+  margin-top: 10px;
   cursor: pointer;
 }
 .pkmn-section .card-pkmn .header-card .control button i:hover {
   color: rgb(255, 187, 0);
   scale: 1.1;
+}
+.pkmn-section .card-pkmn .header-card .control button .fas, .pkmn-section .card-pkmn .header-card .control button .fa-star {
+  color: rgb(255, 187, 0);
 }
 .pkmn-section .card-pkmn .header-card .header-data {
   width: 100%;
@@ -1276,6 +1280,7 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   align-content: end;
+  padding: 15px;
 }
 .pkmn-section .card-pkmn .grass {
   border: 3px rgb(106, 243, 106) solid;
@@ -1465,11 +1470,12 @@ h1 {
 }
 
 .pagination-section {
+  width: 100%;
   margin: 30px;
 }
 .pagination-section a {
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 20px;
   padding: 15px;
   background-color: #3c59a5;
   text-decoration-line: none;
