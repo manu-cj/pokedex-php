@@ -24,15 +24,22 @@
             </form>
         </div>
         <nav class="navigation">
-                    <?php if (isset($_SESSION['user_id'])): ?>
-                        //ATTENTION, VEILLEZ A BIEN CHANGER LA ROUTE
-                    <a class="user-identification"href="http://localhost:5001/profile.php"><!--RegisterManager.php???-->My account</a>
-                    <a class="user-identification"href="http://localhost:5001/logout.php">Logout</a>
-                <?php else: ?>
-                    <a class="user-identification"href="http://localhost:5001/?c=login">Login</a>
-                    <a class="user-identification"href="http://localhost:5001/?c=register">Register</a>
+            <?php 
+            session_start();
+            if (isset($_SESSION['user'])): ?>
+                <!-- Lien vers le profil utilisateur -->
+                <a class="user-identification" href="http://localhost:5001/profile.php">My account</a>
+                <a class="user-identification" href="http://localhost:5001/?c=logout">Logout</a>
+                
+                <?php if ($_SESSION['user'][1] == '1'): ?>
+                    <a class="user-identification" href="http://localhost:5001/?c=adminPanel">Admin</a>
                 <?php endif; ?>
-                   </nav>
+            <?php else: ?>
+                <a class="user-identification" href="http://localhost:5001/?c=login">Login</a>
+                <a class="user-identification" href="http://localhost:5001/?c=register">Register</a>
+            <?php endif; ?>
+        </nav>
+
     </div>
 </header>
 
