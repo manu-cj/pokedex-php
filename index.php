@@ -31,11 +31,16 @@ switch ($c) {
     case 'login':
         getPath("login");
          break;
+    case 'logout':
+        getPath("logout");
+        break;
     case 'register':
         getPath("register");
         break;
     case 'search':
         getPath("search");
+    case 'adminPanel':
+        getPath("adminPanel");
     case 'connect':
         require __DIR__ . "./controllers/loginController.php";
         break;
