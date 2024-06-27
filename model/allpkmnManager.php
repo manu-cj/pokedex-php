@@ -34,9 +34,28 @@ function clean_encode_and_escape_text($text)
                     $type = explode(', ', $pkmn['type']);
         ?>
                     <article class="card-pkmn card<?= lcfirst($type[0]) ?>">
+                        <div class="header-card <?= lcfirst($type[0])?>"> 
+                            <div class="header-data">
+                                <h2><?= $pkmn['name'] ?></h2>
+                                <h2>n°<?= $pkmn['pokedexNumber'] ?></h2>
+                            </div>
+                            <div class="control">
+                                <?php
+                                if (isset($_SESSION['user'])) {
+                                    ?>
+                                    <form action="./controllers/favoriteController.php" method="post">
+                                        <input type="hidden" name="token" value="<?= $_SESSION['user'][2] ?>">
+                                        <input type="hidden" name="id" value="<?= $_SESSION['user'][3] ?>">
+                                        <button name="add-to-favorite"><i class="far fa-star" title="add to favorite"></i></button>
+                                    </form>
+                                    
+                                    <?php
+                                }
+                                ?>
+                            </div>
+                        </div>
                         <div class="picture-pkmn" style="background-image: url(<?=$pkmn['image']?>);"></div>
                         <div class="data-pkmn <?= lcfirst($type[0]) ?>">
-                            <h2><?= $pkmn['name'] ?> n°<?= $pkmn['pokedexNumber'] ?></h2>
                             <div class="types-pkmn">
                                 <p class="type <?= lcfirst($type[0]) ?>"><?= $type[0] ?></p>
                                 <?php
