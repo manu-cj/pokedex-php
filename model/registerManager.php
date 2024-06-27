@@ -21,6 +21,7 @@ function register($mail,$usrname,$password,$frstName,$lstName,$brthDate) {
         $stmt->bindParam(':brthdate', $brthDate);
         $stmt->bindValue(':user_role',$userrole = 1);
         $stmt->execute();
+        
         echo "<script>alert('User registered successfully.'); window.location.href = 'http://localhost/Becode/pokedex-php/?c=login';</script>";
         $_SESSION["registration"] = true;
     } catch (PDOException $e) {
