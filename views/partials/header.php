@@ -16,10 +16,9 @@
     <div class="header-container">
         <div class="logo">            
             <h1><a class="pokedex-home" href="?c=home">Pokedex</a></h1>
-            <h1><a class="pokedex-home" href="?c=home">Pokedex</a></h1>
         </div>
         <div class="search">
-            <form action="http://localhost:5001/views/pages/search.php" method="get">
+            <form action="http://localhost/Becode/views/pages/search.php" method="get">
                 <input type="text" name="query" placeholder="Search...">
                 <button class="search-button" type="submit">Search</button>
             </form>
@@ -29,15 +28,15 @@
             session_start();
             if (isset($_SESSION['user'])): ?>
                 <!-- Lien vers le profil utilisateur -->
-                <a class="user-identification" href="http://localhost:5001/profile.php">My account</a>
-                <a class="user-identification" href="http://localhost:5001/?c=logout">Logout</a>
+                <a class="user-identification" href="?c=profile.php">My account</a>
+                <a class="user-identification" href="?c=logout">Logout</a>
                 
                 <?php if ($_SESSION['user'][1] == '1'): ?>
-                    <a class="user-identification" href="http://localhost:5001/?c=adminPanel">Admin</a>
+                    <a class="user-identification" href="?c=adminPanel">Admin</a>
                 <?php endif; ?>
             <?php else: ?>
-                <a class="user-identification" href="http://localhost:5001/?c=login">Login</a>
-                <a class="user-identification" href="http://localhost:5001/?c=register">Register</a>
+                <a class="user-identification" href="?c=login">Login</a>
+                <a class="user-identification" href="?c=register">Register</a>
             <?php endif; ?>
         </nav>
 
@@ -45,4 +44,5 @@
 </header>
 
     
+</body>
 </body>

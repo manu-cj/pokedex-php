@@ -31,6 +31,8 @@ switch ($c) {
     case 'login':
         getPath("login");
          break;
+    case 'profile':
+        getPath('profile');
     case 'logout':
         getPath("logout");
         break;
@@ -67,7 +69,3 @@ switch ($a) {
         break;
 }
 }
-
-
-
-

@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (verifyCredentials($email, $password)) {
                 // Connexion réussie
                 echo 'its ok';
-                echo "<script>window.location.href = 'http://localhost:5001/index.php';</script>";
+                echo "<script>window.location.href = './../?c=home';</script>";
                 exit();
             } else {
                 // Identifiants incorrects
