@@ -32,7 +32,8 @@ switch ($c) {
         getPath("login");
          break;
     case 'profile':
-        getPath('profile');
+        getPath("profile");
+        break;
     case 'logout':
         getPath("logout");
         break;

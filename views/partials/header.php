@@ -28,7 +28,7 @@
             session_start();
             if (isset($_SESSION['user'])): ?>
                 <!-- Lien vers le profil utilisateur -->
-                <a class="user-identification" href="?c=profile.php">My account</a>
+                <a class="user-identification" href="?c=profile">My account</a>
                 <a class="user-identification" href="?c=logout">Logout</a>
                 
                 <?php if ($_SESSION['user'][1] == '1'): ?>
