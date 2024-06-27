@@ -20,9 +20,93 @@
         border: 2px solid;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        transition: ease-out 0.3s;
 
+
+
+        .grass {
+         
+          border: 3px rgb(106, 243, 106) solid;
+          background-color: #4aca00df;
+      }
+      .fire {
+          border: 3px rgb(255, 175, 71) solid;
+          background-color: #f44122d1;
+      }
+      .water {
+          background: #2c84e2fb ; /* Bleu pour l'élément eau */
+          border: 3px rgb(156, 243, 255) solid;
+        }
+      .bug {
+          border: 3px rgb(104, 188, 2) solid;
+          background-color: #a2c74cdc;
+      }
+      .normal {
+          border: 3px #e3dcdc solid; /* Couleur gris-vert pour le type Normal */
+          background-color: #a8a878d6; /* Couleur du texte */
+        }
+        .poison {
+          border: 3px #c060f8 solid; /* Couleur gris-vert pour le type Normal */
+          background-color: #8742c8da; /* Couleur du texte */
+        }
+        .electric {
+          border: 3px #e39400 solid; /* Couleur gris-vert pour le type Normal */
+          background-color: #ccb806db; /* Couleur du texte */
+        }
+        .ground {
+          border: 3px #895519 solid; /* Couleur gris-vert pour le type Normal */
+          background-color: #a0643fd3; /* Couleur du texte */
+        }
+        .fairy {
+          border: 3px #a75190 solid; /* Couleur gris-vert pour le type Normal */
+          background-color: #f381fdd2; /* Couleur du texte */
+        }
+        .psychic {
+          border: 3px #b70b3e solid; /* Couleur gris-vert pour le type Normal */
+          background-color: #f0036ad5; /* Couleur du texte */
+        }
+        .rock {
+          border: 3px solid #e45a14; /* Couleur gris-vert pour le type Normal */
+          background-color: #f29b54d3; /* Couleur du texte */
+        }
+        .ghost {
+          border: 3px solid #c595fc; /* Couleur gris-vert pour le type Normal */
+          background-color: #7206f6cf; /* Couleur du texte */
+          color: white;
+        }
+        .fighting {
+          border: 3px solid rgb(248, 157, 0);
+          background-color: #ff6f00c0;
+      }
+      .steel {
+          border: 3px solid rgb(203, 202, 202);
+          background-color: #797979e3;
+      }
+      .dragon {
+          border: 3px solid rgb(50, 222, 119);
+          background-color: #4c00ffe1;
+      }
+      .ice {
+          border: 3px solid rgb(71, 243, 255);
+          background-color: #22e6f4da;
+      }
+      .dark {
+          border: 3px solid rgb(255, 255, 255);
+          background-color: #03040dcf;
+          color: white;
+      }
+      .flying {
+          border: 3px solid rgb(0, 237, 241);
+          background-color: #81d3ffd8;
+      }
+      &:hover {
+        border: 4px white solid;
+        scale: 1.05;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        cursor: pointer;
+      }
         .picture-pkmn {
-            width:60%;
+            width:70%;
             height:50%; 
             background-size:cover;
             background-position: center;
@@ -62,82 +146,7 @@
             }
         }
 
-        .grass {
-         
-          border: 3px green solid;
-          background-color: #79c74cd8;
-      }
-      .fire {
-          border: 3px tomato solid;
-          background-color: #f47d22d1;
-      }
-      .water {
-          background: #2c84e2fb ; /* Bleu pour l'élément eau */
-          border: 3px rgb(0, 113, 128) solid;
-        }
-      .bug {
-          border: 3px rgb(64, 128, 0) solid;
-          background-color: #81c74cdc;
-      }
-      .normal {
-          border: 3px #a8a878 solid; /* Couleur gris-vert pour le type Normal */
-          background-color: #a8a878d6; /* Couleur du texte */
-        }
-        .poison {
-          border: 3px #af40ef solid; /* Couleur gris-vert pour le type Normal */
-          background-color: #8742c8da; /* Couleur du texte */
-        }
-        .electric {
-          border: 3px #f8e700 solid; /* Couleur gris-vert pour le type Normal */
-          background-color: #f7d00cdc; /* Couleur du texte */
-        }
-        .ground {
-          border: 3px #895519 solid; /* Couleur gris-vert pour le type Normal */
-          background-color: #a0643fd3; /* Couleur du texte */
-        }
-        .fairy {
-          border: 3px #a75190; /* Couleur gris-vert pour le type Normal */
-          background-color: #f381fdd2; /* Couleur du texte */
-        }
-        .psychic {
-          border: 3px #a90a3a; /* Couleur gris-vert pour le type Normal */
-          background-color: #f0036ad5; /* Couleur du texte */
-        }
-        .rock {
-          border: 3px solid #e45a14; /* Couleur gris-vert pour le type Normal */
-          background-color: #f29b54d3; /* Couleur du texte */
-        }
-        .ghost {
-          border: 3px solid #c595fc; /* Couleur gris-vert pour le type Normal */
-          background-color: #7206f6cf; /* Couleur du texte */
-          color: white;
-        }
-        .fighting {
-          border: 3px solid rgb(248, 128, 0);
-          background-color: #ff6f00c0;
-      }
-      .steel {
-          border: 3px solid rgb(93, 92, 92);
-          background-color: #8c8a8ae3;
-      }
-      .dragon {
-          border: 3px solid rgb(108, 71, 255);
-          background-color: #4c00ffe1;
-      }
-      .ice {
-          border: 3px solid rgb(71, 243, 255);
-          background-color: #22e6f4da;
-      }
-      .dark {
-          border: 3px solid rgb(255, 255, 255);
-          background-color: #03040dcf;
-          color: white;
-      }
-      .flying {
-          border: 3px solid rgb(133, 229, 253);
-          background-color: #81d3ffd8;
-      }
-        
+      
 
     }
 

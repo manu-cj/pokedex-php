@@ -18,8 +18,20 @@ FROM php:8.3.8-apache
 # Copy app files from the app directory.
 
 COPY ../../ /var/www/html
-RUN apt-get update && apt-get install -y curl
+RUN apt-get update && apt-get install -y \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j$(nproc) gd
+
+# Installer MySQLi et autres extensions PHP si nécessaire
+RUN docker-php-ext-install mysqli
+
+# Activer les modules Apache nécessaires
+RUN a2enmod rewrite
 RUN docker-php-ext-install pdo pdo_mysql
+
 
 # Your PHP application may require additional PHP extensions to be installed
 # manually. For detailed instructions for installing extensions can be found, see

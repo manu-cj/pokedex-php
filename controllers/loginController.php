@@ -26,7 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Appeler la fonction pour vérifier les identifiants
             if (verifyCredentials($email, $password)) {
                 // Connexion réussie
-                header("Location: ../views/pages/index.php");
+                echo 'its ok';
+                //  header("Location: ../../");
                 exit();
             } else {
                 // Identifiants incorrects
@@ -37,11 +38,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Rediriger vers la page de connexion si des erreurs sont présentes
     if (!empty($_SESSION['errors'])) {
-        header("Location: ../views/pages/login.php");
+        echo "it's not ok";
+        // header("Location: ?c=login");
         exit();
     }
 } else {
-    header("Location: ../views/pages/login.php");
+    header("Location: ?c=login");
     exit();
 }
 ?>

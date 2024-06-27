@@ -3,6 +3,7 @@
   "liveSassCompile.settings.forceBaseDirectory": "",
   "liveSassCompile.settings.useNewCompiler": false,
   "liveSassCompile.settings.formats": [
+    
 
     {
       "format": "expanded",
