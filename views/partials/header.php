@@ -16,6 +16,7 @@
     <div class="header-container">
         <div class="logo">            
             <h1><a class="pokedex-home" href="?c=home">Pokedex</a></h1>
+            <h1><a class="pokedex-home" href="?c=home">Pokedex</a></h1>
         </div>
         <div class="search">
             <form action="http://localhost:5001/views/pages/search.php" method="get">
@@ -24,15 +25,22 @@
             </form>
         </div>
         <nav class="navigation">
-                    <?php if (isset($_SESSION['user_id'])): ?>
-                        //ATTENTION, VEILLEZ A BIEN CHANGER LA ROUTE
-                    <a class="user-identification"href="?=c=profile"><!--RegisterManager.php???-->My account</a>
-                    <a class="user-identification"href="?c=logout">Logout</a>
-                <?php else: ?>
-                    <a class="user-identification"href="?c=login">Login</a>
-                    <a class="user-identification"href="?c=register">Register</a>
+            <?php 
+            session_start();
+            if (isset($_SESSION['user'])): ?>
+                <!-- Lien vers le profil utilisateur -->
+                <a class="user-identification" href="http://localhost:5001/profile.php">My account</a>
+                <a class="user-identification" href="http://localhost:5001/?c=logout">Logout</a>
+                
+                <?php if ($_SESSION['user'][1] == '1'): ?>
+                    <a class="user-identification" href="http://localhost:5001/?c=adminPanel">Admin</a>
                 <?php endif; ?>
-                   </nav>
+            <?php else: ?>
+                <a class="user-identification" href="http://localhost:5001/?c=login">Login</a>
+                <a class="user-identification" href="http://localhost:5001/?c=register">Register</a>
+            <?php endif; ?>
+        </nav>
+
     </div>
 </header>
 

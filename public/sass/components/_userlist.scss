@@ -1,0 +1,10 @@
+#userList {
+    li {
+        margin-right:25px;
+    }
+
+    input[type="button"] {
+        @extend .pointer;
+        margin-right:5px;
+    }
+}
