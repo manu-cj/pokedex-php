@@ -12,6 +12,8 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center !important;
+    align-content: center;
     margin: 1dvw auto;
     max-width: 90dvw;
 }
@@ -21,7 +23,6 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 1dvw auto;
    }
 
 .pkmnlogo {
@@ -51,8 +52,10 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
+    align-items: center;
 }
 
 .location {
     height: 20px;
 }
+
