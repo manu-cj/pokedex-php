@@ -26,6 +26,7 @@
         <nav class="navigation">
             <?php 
             session_start();
+            include('./views/partials/notification.php');
             if (isset($_SESSION['user'])): ?>
                 <!-- Lien vers le profil utilisateur -->
                 <a class="user-identification" href="http://localhost:5001/profile.php">My account</a>

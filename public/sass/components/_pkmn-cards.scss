@@ -43,15 +43,21 @@
               background: none;
               border: none;
               i {
+                margin: 5px;
                 font-size: x-large;
                 color: white;
                 transition: 1 ease-in;
-                margin-top: 5px;
+                margin-top: 10px;
+                
                 cursor: pointer;
                 &:hover {
                   color: rgb(255, 187, 0);
                   scale: 1.1;
                 }
+              }
+
+              .fas, .fa-star {
+                color: rgb(255, 187, 0);
               }
             } 
           }
@@ -64,6 +70,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-content: end;
+            padding: 15px;
           }
         }
 
