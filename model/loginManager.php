@@ -11,7 +11,7 @@ function verifyCredentials($email, $password) {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user && password_verify($password, $user['password_hash'])) {
-        $_SESSION["user"] = [$user['username'], $user['user_role'], $user['verification_token'], $user['id']];
+        $_SESSION["user"] = ['username'=> $user['username'],'user_role'=> $user['user_role'],'verification_token'=> $user['verification_token'],'user_id'=> $user['id'], 'first_name'=>$user['first_name'], 'last_name'=>$user['last_name']];
         return true;
     }
 

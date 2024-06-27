@@ -22,12 +22,12 @@ function register($mail,$usrname,$password,$frstName,$lstName,$brthDate,$token) 
         $stmt->bindParam(':verification_token', $token);
         $stmt->bindValue(':user_role',$userrole = 1);
         $stmt->execute();
-        echo "<script>alert('User registered successfully.'); window.location.href = 'http://localhost:5001/?c=login';</script>";
+        echo "<script>alert('User registered successfully.'); window.location.href = '../?c=login';</script>";
         $_SESSION["registration"] = true;
     } catch (PDOException $e) {
         // Handle the exception (e.g., log it, display an error message, etc.)
         echo "Error: " . $e->getMessage();
-        echo "<script>alert('Error'".$e->getMessage()."); window.location.href = 'http://localhost:5001/?c=register';</script>";
+        echo "<script>alert('Error'".$e->getMessage()."); window.location.href = '?c=register';</script>";
     }
     
 }
