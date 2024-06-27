@@ -13,6 +13,8 @@ print_r($_SESSION['user']);
 
 require_once __DIR__ . '../../partials/header.php';
 
+
+
 ?>
 
 <main>
