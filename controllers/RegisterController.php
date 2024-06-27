@@ -12,6 +12,12 @@ if (isset($_POST['register'])) {
     $lstName = htmlspecialchars($_POST['last_name']);
     $brthDate = htmlspecialchars($_POST['birth_date']);
     $confpass = htmlspecialchars($_POST['confpassword']);
+    
+    function generateToken($length) {
+        return bin2hex(random_bytes($length));
+    }
+    
+    $token = generateToken(32);
 
     // Validate email
     if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
@@ -29,7 +35,7 @@ if (isset($_POST['register'])) {
                 header('location: ?c=login');
             } else {
                 require('../model/registerManager.php');
-                register($mail,$usrname,$password,$frstName,$lstName,$brthDate);
+                register($mail,$usrname,$password,$frstName,$lstName,$brthDate, $token);
             }
         }
     }
