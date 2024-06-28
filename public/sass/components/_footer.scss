@@ -63,6 +63,35 @@ footer {
     margin-right: 1dvw;
 }
 
+.github-pikachu {
+    filter: brightness(0) saturate(100%) invert(79%) sepia(73%) saturate(1680%) hue-rotate(351deg) brightness(103%) contrast(108%);
+    transition: transform 0.8s ease-in-out;
+    &:hover {
+       animation: github-dance 0.8s ease-in-out infinite;
+    }
+}
+
+@keyframes github-dance {
+    0% {
+        transform:scale(1) rotate(0deg);
+    }
+    25% {
+        transform:scale(1.2) rotate(25deg);
+    }
+    50% {
+        transform:scale(1.4) rotate(0deg);
+    }
+    75% {
+        transform:scale(1.2) rotate(-25deg);
+    }
+    100% {
+        transform:scale(1) rotate(0deg);
+    }    
+}
+
+
+
+
 @media (max-width: 768px) {
 
     .footer-container {
