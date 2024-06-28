@@ -35,7 +35,7 @@ function page1($offset = 0)
         foreach ($results as $pkmn) {
             $type = explode(', ', $pkmn['type']);
 ?>
-            <article class="card-pkmn card<?= lcfirst($type[0]) ?>">
+            <article class="card-pkmn card<?= lcfirst($type[0]) ?>" id="<?=$pkmn['name']?>">
                 <div class="header-card <?= lcfirst($type[0]) ?>">
                     <div class="header-data">
                         <h2><?= $pkmn['name'] ?></h2>
@@ -65,55 +65,10 @@ function page1($offset = 0)
                         ?>
                     </div>
                     <blockquote><?= clean_encode_and_escape_text(strtolower($pkmn['description'])) ?></blockquote>
-                    <!-- <audio controls class="cri">
-                                <source src="<?= $pkmn['cri'] ?>" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio> -->
-                    <a href="http://localhost:5001/views/pages/search.php?query=<?= $pkmn['name'] ?>">Voir</a>
+                    <a href="http://localhost:5001/views/pages/search.php?query=<?= $pkmn['name'] ?>">See More</a>
                 </div>
             </article>
         <?php
-        }
-    }
-}
-
-function page2()
-{
-    require("./Engine/connect.php");
-
-
-
-    $sql = 'SELECT * from pokemon LIMIT 50 OFFSET 50';
-    $select = $conn->prepare($sql);
-    if ($select->execute()) {
-        $results = $select->fetchAll(PDO::FETCH_ASSOC);
-
-        foreach ($results as $pkmn) {
-            $type = explode(', ', $pkmn['type']);
-        ?>
-            <article class="card-pkmn card<?= lcfirst($type[0]) ?>">
-                <div class="picture-pkmn" style="background-image: url('<?= $pkmn['image'] ?>');"></div>
-                <div class="data-pkmn <?= lcfirst($type[0]) ?>">
-                    <h2><?= $pkmn['name'] ?> n°<?= $pkmn['pokedexNumber'] ?></h2>
-                    <div class="types-pkmn">
-                        <p class="type <?= lcfirst($type[0]) ?>"><?= $type[0] ?></p>
-                        <?php
-                        if ($type[1] !== '') {
-                        ?>
-                            <p class="type <?= lcfirst($type[1]) ?>"><?= $type[1] ?></p>
-                        <?php
-                        }
-                        ?>
-                    </div>
-                    <blockquote><?= clean_encode_and_escape_text(strtolower($pkmn['description'])) ?></blockquote>
-                    <!-- <audio controls class="cri">
-                            <source src="<?= $pkmn['cri'] ?>" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio> -->
-                    <a href="/?c=pokemon&name=<?= $pkmn['name'] ?>">Voir</a>
-                </div>
-            </article>
-<?php
         }
     }
 }

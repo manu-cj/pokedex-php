@@ -1,0 +1,26 @@
+.titlePage {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.favorite-page {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    .user-list {
+        width: 20%;
+        text-align: center;
+        a {
+            text-decoration-line: none;
+            color: #5a87f7;
+         }
+    }
+    .favorite-card {
+        width: 80%;
+    }
+}

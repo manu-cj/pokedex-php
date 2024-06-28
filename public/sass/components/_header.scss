@@ -30,8 +30,10 @@ h1 {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    max-width: 8dvw;
 }
 
 .pokemon-logo {
@@ -104,7 +106,10 @@ h1 {
     .navigation {
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: center;
+        flex-wrap: nowrap;
+        max-width: 100dvw;
+        
     }    
 }
 

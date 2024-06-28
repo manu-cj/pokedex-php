@@ -1,13 +1,6 @@
 
 <?php
-// Connecting to the database
-// $servername = "db";
-// $username = "root";
-// $password = "rootpassword";
-// $dbname = "pokedex";
 
-// // Create a connection
-// $conn = new mysqli($servername, $username, $password, $dbname);
 include('./../../Engine/connect.php');
 // Function for clearing, encoding, and screening text
 function clean_encode_and_escape_text($text)
@@ -73,8 +66,8 @@ if (!empty($query)) {
                                 <?php
                                 function render_stat_bar($label, $value, $class) {
                                     echo "<div class='stat-label'><p>$label</p></div>";
-                                    echo "<div class='stat-bar' title=". htmlspecialchars($value) .">                                    
-                                    <div class='stat-bar-inner $class' style='width: " . htmlspecialchars($value/2) . "%;'></div>
+                                    echo "<div class='stat-bar'>                                    
+                                    <div class='stat-bar-inner $class' style='width: " . htmlspecialchars($value / 2) . "%;'></div>
                                   </div>";
                                 }
                                 render_stat_bar('HP', $row['hp'], 'hp-bar');
@@ -85,7 +78,7 @@ if (!empty($query)) {
                                 render_stat_bar('Speed', $row['speed'], 'speed-bar');
                                 ?>
                             </div>
-                            <p><strong>Evolution:</strong> <?php echo htmlspecialchars($row['gen']); ?></p>
+                            <p><strong>Evolution:</strong> <?php echo htmlspecialchars($row['evolution_chain']); ?></p>
                         </div>
                         <div class="pokemon-image">
                             <p class="pokemon-number"><?php echo "# " . htmlspecialchars($row['pokedexNumber']); ?></p>
