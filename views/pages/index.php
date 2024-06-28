@@ -2,8 +2,7 @@
 
 session_start();
 $title = "Home";
-print_r($_SESSION['user']);
-print_r($_SESSION['favorite']);
+
 require_once __DIR__ . '../../partials/header.php';
 
 
@@ -30,6 +29,9 @@ endif;
         $page = htmlspecialchars($page);
     }
    
+?>
+<section class="pkmn-section">
+<?php
 
     switch ($page) {
         case 1:
@@ -188,7 +190,7 @@ if (!isset($page)) {
        
     ?>
 
-    <a href="?c=home&page=<?= $page+=1 ?>"><i class="fas fa-caret-right"></i></a>
+    <a href="?c=home&page=<?= $page +=2 ?>"><i class="fas fa-caret-right"></i></a>
     <?php
 if ($page < 14) {
     ?>
