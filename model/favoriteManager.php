@@ -20,10 +20,10 @@ function addToFavorite($userid, $pokemonId, $token, $pokemonName)
                     $_SESSION['notification'] = '<div class="notification-error">An error occurred while adding to favorites.</div>';
                 }
             } else {
-                $_SESSION['notification'] =  '<div class="notification-error">Invalid verification token.</div>';
+                $_SESSION['notification'] =  '<div class="notification-error">Invalid verification.</div>';
             }
         } else {
-            $_SESSION['notification'] = '<div class="notification-error">An error occurred while fetching user data.</div>';
+            $_SESSION['notification'] = '<div class="notification-error">An error occurred.</div>';
         }
     } catch (PDOException $e) {
         echo '<div class="notification-error">Database error: ' . $e->getMessage() . '</div>';
@@ -44,8 +44,9 @@ function checkFavorite($pokemonId, $pokemonName)
              <form action="./controllers/favoriteController.php" method="post">
                  <input type="hidden" name="token" value="<?= $_SESSION['user'][2] ?>">
                  <input type="hidden" name="id" value="<?= $_SESSION['user'][3] ?>">
-                 <input type="hidden" name="pokemon-id" value="<?= $$value['pokemon_id'] ?>">
-                 <button name="delete-favorite"><i class="fas fa-star" title="add to favorite"></i></button>
+                 <input type="hidden" name="pokemon-id" value="<?= $pokemonId ?>">
+                 <input type="hidden" name="pokemon-name" value="<?= $pokemonName ?>">
+                 <button name="delete-favorite"><i class="fas fa-star" title="delete to favorite"></i></button>
              </form>
 <?php
             } else {
@@ -61,6 +62,34 @@ function checkFavorite($pokemonId, $pokemonName)
 <?php
             }
         }
+    } catch (PDOException $e) {
+        echo '<div class="notification-error">Database error: ' . $e->getMessage() . '</div>';
+    }
+}
+
+
+function removeFavorite($userid, $pokemonId, $token, $pokemonName) {
+    require_once '../Engine/connect.php';
+    try {
+
+        $sql = 'SELECT * FROM users WHERE user_id = :user_id';
+        $select = $conn->prepare($sql);
+        if ($select->execute([':user_id' => $userid])) {
+            $user = $select->fetch(PDO::FETCH_ASSOC);
+            if ($user['verification_token'] === $token) {
+                $sql = 'DELETE FROM user_collection WHERE user_id = :user_id AND pokemon_id = :pokemon_id';
+                $delete = $conn->prepare($sql);
+                if ($delete->execute([':user_id' => $userid, ':pokemon_id' => $pokemonId])) {
+                    echo '<div class="notification-success">' . $pokemonName . ' deleted to favorites</div>';
+                }else {
+                    echo '<div class="notification-error">An error occurred while deleting to favorites.</div>';
+                }
+            }else {
+                echo  '<div class="notification-error">Invalid verification.</div>';
+            }
+        }else {
+            echo '<div class="notification-error">An error occurred.</div>';
+        } 
     } catch (PDOException $e) {
         echo '<div class="notification-error">Database error: ' . $e->getMessage() . '</div>';
     }

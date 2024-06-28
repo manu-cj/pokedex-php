@@ -3,7 +3,6 @@
 session_start();
 $title = "Home";
 print_r($_SESSION['user']);
-print_r($_SESSION['favorite']);
 require_once __DIR__ . '../../partials/header.php';
 
 
@@ -27,6 +26,9 @@ endif;
         $page = htmlspecialchars($page);
     }
    
+?>
+<section class="pkmn-section">
+<?php
 
     switch ($page) {
         case 1:
