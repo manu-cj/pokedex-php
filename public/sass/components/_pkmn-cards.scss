@@ -9,6 +9,14 @@
     align-content: center;
     row-gap: 50px;
     column-gap: 75px;
+    a {
+      text-decoration-line: none;
+      color: white;
+      &:hover {
+        color: rgb(219, 217, 217);
+        scale: 1.1;
+      }
+    }
 
     .card-pkmn {
         display: flex;
@@ -39,7 +47,7 @@
             flex-direction: row;
             justify-content: flex-end;
             padding: 5px;
-            
+
             button {
               background: none;
               border: none;

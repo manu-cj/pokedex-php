@@ -2,7 +2,7 @@
 
 session_start();
 $title = "Home";
-print_r($_SESSION['user']);
+
 require_once __DIR__ . '../../partials/header.php';
 
 
@@ -187,7 +187,7 @@ if (!isset($page)) {
        
     ?>
 
-    <a href="?c=home&page=<?= $page+=1 ?>"><i class="fas fa-caret-right"></i></a>
+    <a href="?c=home&page=<?= $page +=2 ?>"><i class="fas fa-caret-right"></i></a>
     <?php
 if ($page < 14) {
     ?>

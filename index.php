@@ -39,8 +39,13 @@ switch ($c) {
         break;
     case 'search':
         getPath("search");
+        break;
     case 'adminPanel':
         getPath("adminPanel");
+        break;
+    case 'collection':
+        getPath("collection");
+        break;
     case 'connect':
         require __DIR__ . "./controllers/loginController.php";
         break;

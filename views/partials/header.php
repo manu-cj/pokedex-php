@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($title); ?> - Pokedex</title>
     <link href="./../../public/css/style.css" type="text/css" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:5001/public/img/pokedex-icon.png">
+    <link href="../../public/css/style.css" type="text/css" rel="stylesheet">
     <script defer src="https://kit.fontawesome.com/d8438e7f2f.js" crossorigin="anonymous"></script>
+    <script defer src="../../public/js/main.js"></script>
 </head>
 
 <body>
@@ -27,8 +28,10 @@
             <?php 
             session_start();
             include('./views/partials/notification.php');
+            
             if (isset($_SESSION['user'])): ?>
                 <!-- Lien vers le profil utilisateur -->
+                <a class="user-identification" href="http://localhost:5001/?c=collection&username=<?=$_SESSION['user'][0]?>">Collection</a>
                 <a class="user-identification" href="http://localhost:5001/profile.php">My account</a>
                 <a class="user-identification" href="http://localhost:5001/?c=logout">Logout</a>
                 

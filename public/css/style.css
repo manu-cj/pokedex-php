@@ -543,7 +543,7 @@ footer {
   background-color: #3c59a5;
   border-top: 1dvw solid #ffcc03;
   color: #ffcc03;
-  width: 100dvw;
+  width: 100%;
   margin-top: 1.5dvw;
 }
 
@@ -742,8 +742,10 @@ h1 {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  max-width: 8dvw;
 }
 
 .pokemon-logo {
@@ -812,7 +814,9 @@ h1 {
   .navigation {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 100dvw;
   }
 }
 @media (max-width: 768px) {
@@ -1223,6 +1227,14 @@ h1 {
   row-gap: 50px;
   column-gap: 75px;
 }
+.pkmn-section a {
+  text-decoration-line: none;
+  color: white;
+}
+.pkmn-section a:hover {
+  color: rgb(219, 217, 217);
+  scale: 1.1;
+}
 .pkmn-section .card-pkmn {
   display: flex;
   flex-direction: column;
@@ -1472,10 +1484,15 @@ h1 {
 .pagination-section {
   width: 100%;
   margin: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
 }
 .pagination-section a {
-  width: 15px;
-  height: 20px;
+  display: block;
+  width: 40px;
+  height: 50px;
   padding: 15px;
   background-color: #3c59a5;
   text-decoration-line: none;
@@ -1489,6 +1506,34 @@ h1 {
   scale: 1.05;
 }
 
+@media (max-width: 600px) {
+  .pagination-section {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 30px;
+  }
+  .pagination-section a {
+    display: block;
+    width: max-content;
+    height: 30px;
+    padding: 5px;
+    background-color: #3c59a5;
+    text-decoration: none; /* Correction de la propriété text-decoration */
+    color: #ffcc03;
+    font-weight: 500;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .pagination-section a:hover {
+    background-color: #537fef;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transform: scale(1.05); /* Correction de la propriété transform */
+  }
+}
 #userList ul {
   display: flex;
   flex-direction: column;
@@ -1501,4 +1546,31 @@ h1 {
 }
 #userList input[type=button] {
   margin-right: 5px;
+}
+
+.titlePage {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.favorite-page {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+.favorite-page .user-list {
+  width: 20%;
+  text-align: center;
+}
+.favorite-page .user-list a {
+  text-decoration-line: none;
+  color: #5a87f7;
+}
+.favorite-page .favorite-card {
+  width: 80%;
 }/*# sourceMappingURL=style.css.map */
