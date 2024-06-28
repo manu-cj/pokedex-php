@@ -16,6 +16,9 @@ require_once __DIR__ . '../../partials/header.php';
 if (isset($_SESSION['user'])):
     echo "<p>Hello <strong>" . $_SESSION['user'][0] . "</p></strong>";
 endif;
+?>
+<section class="pkmn-section">
+    <?php
    
     require('./model/allpkmnManager.php');
 
