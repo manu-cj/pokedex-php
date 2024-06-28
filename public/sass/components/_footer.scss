@@ -67,11 +67,11 @@ footer {
     filter: brightness(0) saturate(100%) invert(79%) sepia(73%) saturate(1680%) hue-rotate(351deg) brightness(103%) contrast(108%);
     transition: transform 0.8s ease-in-out;
     &:hover {
-       animation: dance 0.8s ease-in-out infinite;
+       animation: github-dance 0.8s ease-in-out infinite;
     }
 }
 
-@keyframes dance {
+@keyframes github-dance {
     0% {
         transform:scale(1) rotate(0deg);
     }
