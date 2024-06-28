@@ -74,7 +74,7 @@ if (!empty($query)) {
                                 function render_stat_bar($label, $value, $class) {
                                     echo "<div class='stat-label'><p>$label</p></div>";
                                     echo "<div class='stat-bar'>                                    
-                                    <div class='stat-bar-inner $class' style='width: " . htmlspecialchars($value) . "%;'></div>
+                                    <div class='stat-bar-inner $class' style='width: " . htmlspecialchars($value / 2) . "%;'></div>
                                   </div>";
                                 }
                                 render_stat_bar('HP', $row['hp'], 'hp-bar');
