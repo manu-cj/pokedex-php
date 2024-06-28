@@ -113,8 +113,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -605,6 +604,31 @@ footer {
   margin-right: 1dvw;
 }
 
+.github-pikachu {
+  filter: brightness(0) saturate(100%) invert(79%) sepia(73%) saturate(1680%) hue-rotate(351deg) brightness(103%) contrast(108%);
+  transition: transform 0.8s ease-in-out;
+}
+.github-pikachu:hover {
+  animation: dance 0.8s ease-in-out infinite;
+}
+
+@keyframes dance {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.2) rotate(25deg);
+  }
+  50% {
+    transform: scale(1.4) rotate(0deg);
+  }
+  75% {
+    transform: scale(1.2) rotate(-25deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -1222,8 +1246,7 @@ h1 {
   align-items: center;
   align-content: center;
   row-gap: 50px;
-  -moz-column-gap: 75px;
-       column-gap: 75px;
+  column-gap: 75px;
 }
 .pkmn-section .card-pkmn {
   display: flex;

@@ -2,19 +2,19 @@
     <div class="footer-container">
         <div class="team">
             <div class="teamplayer">
-                <a class="github" href="https://github.com/manu-cj" target="blanc" ><img src="../../public/img/footer/pkmn.svg" class="svg" alt="Pikachu face"></a>
+                <a class="github" href="https://github.com/manu-cj" target="blanc" ><img class="github-pikachu" src="../../public/img/footer/pkmn.svg" class="svg" alt="Pikachu face"></a>
                 <h6>Manu</h6>
             </div>
             <div class="teamplayer">
-                <a class="github" href="https://github.com/Iliess-A" target="blanc" ><img src="../../public/img/footer/pkmn.svg" class="svg" alt="Pikachu face"></a>
+                <a class="github" href="https://github.com/Iliess-A" target="blanc" ><img class="github-pikachu" src="../../public/img/footer/pkmn.svg" class="svg" alt="Pikachu face"></a>
                 <h6>Ilies</h6>
             </div>
             <div class="teamplayer">
-                <a class="github" href="https://github.com/javadaller" target="blanc" ><img src="../../public/img/footer/pkmn.svg" class="svg" alt="Pikachu face"></a>
+                <a class="github" href="https://github.com/javadaller" target="blanc" ><img class="github-pikachu" src="../../public/img/footer/pkmn.svg" class="svg" alt="Pikachu face"></a>
                 <h6>Arnaud</h6>
             </div>
             <div class="teamplayer">
-                <a class="github" href="https://github.com/NataliiaTasha" target="blanc" ><img src="../../public/img/footer/pkmn.svg" class="svg" alt="Pikachu face"></a>
+                <a class="github" href="https://github.com/NataliiaTasha" target="blanc" ><img class="github-pikachu" src="../../public/img/footer/pkmn.svg" class="svg" alt="Pikachu face"></a>
                 <h6>Tasha</h6>
             </div>
         </div>
