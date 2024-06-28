@@ -999,7 +999,7 @@ ul {
   color: #3c59a5;
   padding: 5px;
   border-radius: 4px;
-  animation: myAnim 2s ease 0s 1 normal forwards;
+  animation: myAnim 5s ease 0s 1 normal forwards;
   position: fixed;
   top: 2vh;
   right: 2vw;
@@ -1329,4 +1329,44 @@ ul {
 }
 #userList input[type=button] {
   margin-right: 5px;
+}
+
+.userInfo {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.userInfo form {
+  display: flex;
+  flex-direction: column;
+}
+.userInfo form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.userInfo form .info, .userInfo form input[type=password], .userInfo form input[type=submit] {
+  margin-bottom: 15px;
+}
+.userInfo form .info input[type=text], .userInfo form input[type=password] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.userInfo form input[type=submit] {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3c59a5;
+  color: #ffcc03;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.userInfo form input[type=submit]:hover {
+  background-color: #ffcc03;
+  color: #3c59a5;
 }/*# sourceMappingURL=style.css.map */

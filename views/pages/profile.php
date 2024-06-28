@@ -1,5 +1,7 @@
 <?php
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start(); // Start the session
 $title = "profile";
 
@@ -16,27 +18,33 @@ require_once __DIR__ . '../../partials/header.php';
 
 
 ?>
-
 <main>
-<!-- 'username', 'user_role','verification_token','user_id', 'first_name', 'last_name' -->
-    <pre>
-    <?php print_r( $_SESSION['user'])?>
-    </pre>
-    <button>modifier</button>
-    
+    <?php 
+    if ($_SESSION['user']['user_role'] == 1) {
+        echo '<p>admin</p>';
+    } else {
+        echo '<p>user</p>';
+    }
+    ?>
+
     <div class="userInfo">
-    <!-- afficher les info du user ensuite qd il appuie sur le bouton modifier l'utilisateur 
-     dois pouvoir voir ces info et les modifier avec le btn push Enfin je dois faire modif mots de passe separement -->
-        <?php foreach ($_SESSION['user'] as $value ){
-            if( $value != $_SESSION['user']['verification_token'] && $value != $_SESSION['user']['user_id']
-            && $value != $_SESSION['user']['user_role']){?>
-            <div class="info">
-            <p><?php echo $value?></p>
-            </div>
-        <?php }}?>
+    <form id="modifUserform" method="post" action="./controllers/modifController.php">
+        <?php
+        foreach ($_SESSION['user'] as $key=>$value) {
+            if ($value != $_SESSION['user']['verification_token'] && $value != $_SESSION['user']['user_id']
+                && $value != $_SESSION['user']['user_role']) {
+                echo "<label for=$key> $key</label>";
+                echo '<div class="info"><input name='.$key.' type="text" value='. $value .'></div>';
+            }
+        }
+        ?>
+        <label for="password">Put your password to confirm changes</label>
+        <input type="password" name="password">
+        <input type="submit" name="update" value="uptade">
+    </form> 
     </div>
-            
 </main>
+
 
 <?php
 

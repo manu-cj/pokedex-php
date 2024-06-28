@@ -1,0 +1,46 @@
+.userInfo {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    form {
+      display: flex;
+      flex-direction: column;
+  
+      label {
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+  
+      .info, input[type="password"], input[type="submit"] {
+        margin-bottom: 15px;
+      }
+  
+      .info input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+  
+      input[type="submit"] {
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #3c59a5;
+        color: #ffcc03;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #ffcc03;
+          color: #3c59a5;
+        }
+      }
+    }
+  }
+  
